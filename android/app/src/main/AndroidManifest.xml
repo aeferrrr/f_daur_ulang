@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="flutter_daur_ulang"
+        android:label="Kreasi Daur Ulang"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
