@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatefulWidget {
@@ -12,72 +13,80 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('First Page'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  // Tambahkan aksi ketika tombol pertama ditekan
-                },
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(40),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  backgroundColor: const Color.fromARGB(255, 231, 115, 106),
-                ),
-                child: Icon(
-                  Icons.delete,
-                  size: 50,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(width: 40),
-              ElevatedButton(
-                onPressed: () {
-                  // Tambahkan aksi ketika tombol kedua ditekan
-                },
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(40),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  backgroundColor: const Color.fromARGB(255, 231, 115, 106),
-                ),
-                child: Icon(
-                  Icons.delete,
-                  size: 50,
-                  color: Colors.white,
-                ),
-              ),
-            ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'images/oke.jpg'), // Ganti dengan path gambar latar belakang
+            fit: BoxFit.cover,
           ),
-          SizedBox(height: 40),
-          CarouselSlider(
-            items: [
-              Image.asset('images/naruto.png'),
-              Image.asset('images/testing.jpg'),
-              Image.asset('images/testing2.jpg'),
-            ],
-            options: CarouselOptions(
-              height: 380.0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              aspectRatio: 16 / 9,
-              autoPlayCurve: Curves.fastOutSlowIn,
-              enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              viewportFraction: 0.8,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Tambahkan aksi ketika tombol pertama ditekan
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.all(40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    backgroundColor: Color.fromARGB(255, 50, 248, 153),
+                  ),
+                  child: Icon(
+                    CupertinoIcons.arrow_3_trianglepath,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 40),
+                ElevatedButton(
+                  onPressed: () {
+                    // Tambahkan aksi ketika tombol kedua ditekan
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.all(40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    backgroundColor: Color.fromARGB(255, 50, 248, 153),
+                  ),
+                  child: Icon(
+                    Icons.delete,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
+            SizedBox(height: 40),
+            CarouselSlider(
+              items: [
+                Image.asset('images/asik.png'),
+                Image.asset('images/testing3.jpg'),
+                Image.asset('images/testing2.jpg'),
+              ],
+              options: CarouselOptions(
+                height: 350.0,
+                enlargeCenterPage: true,
+                autoPlay: true,
+                aspectRatio: 16 / 9,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                viewportFraction: 0.8,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
