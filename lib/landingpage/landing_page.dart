@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_daur_ulang/mainmenu/first_page.dart';
 
 void main() {
   runApp(Home());
@@ -9,7 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Home Page',
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
@@ -60,7 +61,17 @@ class _GreetingScreenState extends State<GreetingScreen> {
         title: Text('$_greeting...'),
       ),
       body: Center(
-        
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      FirstPage()), // Navigasi ke halaman awal (Home)
+            );
+          },
+          child: Text('Kembali ke Beranda'),
+        ),
       ),
     );
   }
