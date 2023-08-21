@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_daur_ulang/mainmenu/first_page.dart';
+import 'package:flutter_daur_ulang/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: HomePage(),
     );
   }
 }
-
