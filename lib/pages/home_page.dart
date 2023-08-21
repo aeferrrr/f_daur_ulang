@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_daur_ulang/anorganik/anorganik_page.dart';
+import 'package:flutter_daur_ulang/organik/organik_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
-      
       body: SafeArea(
         child: Column(
           children: [
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                     height: 25,
                   ),
 
-                  // search bar
+                  // SEARCH BAR
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                     height: 25,
                   ),
 
-                  // Text
+                  // UNTUK TEXT
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
               height: 25,
             ),
 
-            // 4 emoticon
+            // UNTUK EMOTICON
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -199,13 +199,17 @@ class _HomePageState extends State<HomePage> {
               height: 15,
             ),
 
+            // CONTAINER UTAMA
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(25),
-                color: Colors.grey[100],
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(
+                      25), // Melengkungkan sudut kontainer
+                ),
                 child: Center(
                   child: Column(
-                    // buat button
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -226,57 +230,63 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 8,
                       ),
-
-                      // listview
                       Container(
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Container(
+                        child: InkWell(
+                          onTap: () {
+                            // Navigasi ke halaman selanjutnya di sini
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => OrganikPage()));
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Container(
                                   padding: EdgeInsets.all(16),
-                                  color: Colors.green[200],
+                                  color: Color(0xFFa0e548),
                                   child: Icon(
-                                    Icons.delete,
+                                    Icons.recycling,
                                     color: Colors.white,
-                                  )),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                // title
-                                Text(
-                                  'Sampah Organik',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                // subtitle
-                                Text(
-                                  'Ada 2 contoh sampah organik',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
-                                    color: Colors.grey,
+                              ),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Sampah Organik',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
                                   ),
-                                )
-                              ],
-                            ),
-                            Icon(Icons.more_horiz)
-                          ],
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Ada 2 contoh sampah organik',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Icon(Icons.more_horiz)
+                            ],
+                          ),
                         ),
                       ),
 
@@ -284,55 +294,65 @@ class _HomePageState extends State<HomePage> {
                         height: 8,
                       ),
 
+                      // ISI DALAM CONTAINER UTAMA
                       Container(
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  color: Colors.deepPurple,
-                                  child: Icon(
-                                    Icons.delete,
-                                    color: Colors.white,
-                                  )),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                // title
-                                Text(
-                                  'Sampah Anorgnaik',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
+                        child: InkWell(
+                          onTap: () {
+                            // Navigasi ke halaman selanjutnya di sini
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AnorganikPage()));
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Container(
+                                    padding: EdgeInsets.all(16),
+                                    color: Color(0xFFf6c445),
+                                    child: Icon(
+                                      Icons.recycling_sharp,
+                                      color: Colors.white,
+                                    )),
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  // title
+                                  Text(
+                                    'Sampah Anorganaik',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                // subtitle
-                                Text(
-                                  'Ada 2 contoh sampah Anorganik',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
-                                    color: Colors.grey,
+                                  SizedBox(
+                                    height: 8,
                                   ),
-                                )
-                              ],
-                            ),
-                            Icon(Icons.more_horiz)
-                          ],
+                                  // subtitle
+                                  Text(
+                                    'Ada 2 contoh sampah Anorganik',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Icon(Icons.more_horiz)
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -340,6 +360,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+
+            // EXIT
           ],
         ),
       ),
