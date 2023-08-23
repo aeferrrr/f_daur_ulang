@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/anorganik_page.dart';
 import 'package:flutter_daur_ulang/organik/organik_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
+import 'package:flutter_daur_ulang/vidio_lainnya.dart/screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -231,7 +232,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OrganikPage()));
+                      MaterialPageRoute(builder: (context) => AnorganikPage()));
                 },
                 child: Row(
                   children: [
@@ -341,7 +342,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AnorganikPage()));
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
                 child: Row(
                   children: [
