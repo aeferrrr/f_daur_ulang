@@ -37,7 +37,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             height: 20,
                           ),
                           Text(
-                            'Sampah Organik',
+                            'Sampah Anorganik',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 24,
@@ -145,21 +145,23 @@ class _AnorganikPageState extends State<AnorganikPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Flexible(child: 
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'INSA',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                    
-                      Text('Menyampaikan Sebuah informasi untuk daur ulang sampah',style: TextStyle(fontSize: 10, color: Colors.grey),)
-                    ],
-                  ),
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'INSA',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
+                        Text(
+                          'Menyampaikan Sebuah informasi untuk daur ulang sampah',
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        )
+                      ],
+                    ),
                   ),
                   Image.asset(
                     'images/card1.png',
@@ -173,8 +175,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
 
             SizedBox(
               height: 25,
-            )
-            ,
+            ),
             // CONTAINER UTAMA
             Expanded(
               child: Container(
