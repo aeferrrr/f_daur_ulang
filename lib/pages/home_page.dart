@@ -3,14 +3,22 @@ import 'package:flutter_daur_ulang/anorganik/anorganik_page.dart';
 import 'package:flutter_daur_ulang/organik/organik_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
+void main() {
+  runApp(MyApp());
 }
 
-class _HomePageState extends State<HomePage> {
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,345 +31,361 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            //
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            'Hallo, Pecinta Lingkungan!',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            '30 Aug, 2023',
-                            style: TextStyle(color: Colors.blue[200]),
-                          )
-                        ],
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue[600],
-                            borderRadius: BorderRadius.circular(12)),
-                        padding: EdgeInsets.all(12),
-                        child: Icon(
-                          Icons.notifications,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  ),
+            HeaderSection(),
+            SizedBox(height: 25),
+            EmoticonSection(),
+            SizedBox(height: 15),
+            RecyclingSection(),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
-                  SizedBox(
-                    height: 25,
-                  ),
-
-                  // SEARCH BAR
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    padding: EdgeInsets.all(12),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.search,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Search',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 25,
-                  ),
-
-                  // UNTUK TEXT
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Apa yang kamu rasakan hari ini?',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Icon(
-                        Icons.more_horiz,
+class HeaderSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Text(
+                      'Hallo, Pecinta Lingkungan!',
+                      style: TextStyle(
                         color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      '30 Aug, 2023',
+                      style: TextStyle(color: Colors.blue[200]),
+                    )
+                  ],
+                ),
               ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue[600],
+                    borderRadius: BorderRadius.circular(12)),
+                padding: EdgeInsets.all(12),
+                child: Icon(
+                  Icons.notifications,
+                  color: Colors.white,
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: 25),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.blue[600],
+              borderRadius: BorderRadius.circular(12),
             ),
-
-            SizedBox(
-              height: 25,
-            ),
-
-            // UNTUK EMOTICON
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            padding: EdgeInsets.all(12),
+            child: Row(
               children: [
-                // bad
-                Column(
-                  children: [
-                    EmoticonFace(
-                      emoticonFace: '😀',
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Smile',
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
+                Flexible(
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
                 ),
-                // fine
-                Column(
-                  children: [
-                    EmoticonFace(
-                      emoticonFace: '😁',
+                SizedBox(width: 5),
+                Flexible(
+                  child: Text(
+                    'Search',
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Happy',
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
-                ),
-                // well
-                Column(
-                  children: [
-                    EmoticonFace(
-                      emoticonFace: '😒',
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Bad',
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    EmoticonFace(
-                      emoticonFace: '🙁',
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Sad',
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
+                  ),
                 ),
               ],
             ),
-
-            SizedBox(
-              height: 15,
-            ),
-
-            // CONTAINER UTAMA
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(25),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(
-                      25), // Melengkungkan sudut kontainer
-                ),
-                child: Center(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Organik & Anorganik',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                          // Widget lainnya di sini
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            // Navigasi ke halaman selanjutnya di sini
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => OrganikPage()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  color: Color(0xFFa0e548),
-                                  child: Icon(
-                                    Icons.recycling,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Sampah Organik',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Ada 2 contoh sampah organik',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Icon(Icons.more_horiz)
-                            ],
-                          ),
-                        ),
-                      ),
-
-                      SizedBox(
-                        height: 8,
-                      ),
-
-                      // ISI DALAM CONTAINER UTAMA
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            // Navigasi ke halaman selanjutnya di sini
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => AnorganikPage()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Container(
-                                    padding: EdgeInsets.all(16),
-                                    color: Color(0xFFf6c445),
-                                    child: Icon(
-                                      Icons.recycling_sharp,
-                                      color: Colors.white,
-                                    )),
-                              ),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // title
-                                  Text(
-                                    'Sampah Anorganaik',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  // subtitle
-                                  Text(
-                                    'Ada 2 contoh sampah Anorganik',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Icon(Icons.more_horiz)
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+          ),
+          SizedBox(height: 25),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                child: Text(
+                  'Apa yang kamu rasakan hari ini?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-            ),
+              Icon(
+                Icons.more_horiz,
+                color: Colors.white,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
 
-            // EXIT
+class EmoticonSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Flexible(
+          flex: 1,
+          child: EmoticonItem(emoticon: '😀', label: 'Smile'),
+        ),
+        Flexible(
+          flex: 1,
+          child: EmoticonItem(emoticon: '😁', label: 'Happy'),
+        ),
+        Flexible(
+          flex: 1,
+          child: EmoticonItem(emoticon: '😒', label: 'Bad'),
+        ),
+        Flexible(
+          flex: 1,
+          child: EmoticonItem(emoticon: '🙁', label: 'Sad'),
+        ),
+      ],
+    );
+  }
+}
+
+class EmoticonItem extends StatelessWidget {
+  final String emoticon;
+  final String label;
+
+  const EmoticonItem({required this.emoticon, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        EmoticonFace(emoticonFace: emoticon),
+        SizedBox(height: 8),
+        Text(label, style: TextStyle(color: Colors.white)),
+      ],
+    );
+  }
+}
+
+class RecyclingSection extends StatefulWidget {
+  @override
+  _RecyclingSectionState createState() => _RecyclingSectionState();
+}
+
+class _RecyclingSectionState extends State<RecyclingSection> {
+  @override
+  Widget build(BuildContext context) {
+    double defaultPaddingBottom = MediaQuery.of(context).padding.bottom;
+
+    return Container(
+      padding: EdgeInsets.fromLTRB(25, 25, 25, defaultPaddingBottom + 240),
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(25),
+        ),
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Flexible(
+                  child: Text(
+                    'Organik & Anorganik',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 8),
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => OrganikPage()));
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0xFFa0e548),
+                      ),
+                      child: Icon(
+                        Icons.recycling,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+                    Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Sampah Organik',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Ada 2 contoh sampah organik',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.more_horiz)
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => OrganikPage()));
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0xFFf6c445),
+                      ),
+                      child: Icon(
+                        Icons.recycling,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+                    Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Sampah Anorganik',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Ada 2 contoh sampah Anorganik',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.more_horiz)
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 8),
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AnorganikPage()));
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color(0xFF9AC1F0),
+                      ),
+                      child: Icon(
+                        Icons.other_houses_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+                    Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Kreasi Lainnya',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Berkreasilah dan menginspirasi!',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.more_horiz)
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
