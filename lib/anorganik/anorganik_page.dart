@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
-import 'package:flutter_daur_ulang/util/emoticon_face.dart';
+
 
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
