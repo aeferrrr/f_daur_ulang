@@ -206,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: Colors.grey[100],
                   borderRadius: BorderRadius.circular(
-                      25), // Melengkungkan sudut kontainer
+                      10), // Melengkungkan sudut kontainer
                 ),
                 child: Center(
                   child: Column(
@@ -330,7 +330,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   // title
                                   Text(
-                                    'Sampah Anorganaik',
+                                    'Sampah Anorganik',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
