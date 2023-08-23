@@ -287,7 +287,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OrganikPage()));
+                      MaterialPageRoute(builder: (context) => AnorganikPage()));
                 },
                 child: Row(
                   children: [
