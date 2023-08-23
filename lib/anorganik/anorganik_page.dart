@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
 
-
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
 
@@ -16,7 +15,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
@@ -77,7 +75,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                   // SEARCH BAR
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.blue[300],
+                      color: Colors.blue[600],
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: EdgeInsets.all(12),
@@ -88,7 +86,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           color: Colors.white,
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 10,
                         ),
                         Text(
                           'Search',
@@ -106,10 +104,10 @@ class _AnorganikPageState extends State<AnorganikPage> {
 
                   // UNTUK TEXT
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        'Sampah apa yang ingin anda ubah',
+                        'Sampah apa yang ingin anda ubah?',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,
@@ -117,7 +115,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         ),
                       ),
                       Icon(
-                        Icons.more_horiz,
+                        Icons.recycling,
                         color: Colors.white,
                       ),
                     ],
@@ -125,30 +123,58 @@ class _AnorganikPageState extends State<AnorganikPage> {
                 ],
               ),
             ),
-            SizedBox(height: 16),
+
+            SizedBox(
+              height: 10,
+            ),
 
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue[600],
-                borderRadius: BorderRadius.circular(12),
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 255, 255)!,
+                    const Color.fromARGB(255, 254, 246, 255)!
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+                borderRadius: BorderRadius.circular(16),
               ),
-              margin: const EdgeInsets.symmetric(horizontal: 25),
-              padding: const EdgeInsets.all(50),
+              margin: const EdgeInsets.symmetric(horizontal: 45),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  
+                  Flexible(child: 
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'INSA',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    
+                      Text('Menyampaikan Sebuah informasi untuk daur ulang sampah',style: TextStyle(fontSize: 10, color: Colors.grey),)
+                    ],
+                  ),
+                  ),
+                  Image.asset(
+                    'images/card1.png',
+                    height: 80,
+                    width: 80,
+                  )
                   // Tambahan widget lain dalam Row jika diperlukan
                 ],
               ),
             ),
+
             SizedBox(
               height: 25,
-            ),
-
-            // UNTUK EMOTICON
-
-            
-
+            )
+            ,
             // CONTAINER UTAMA
             Expanded(
               child: Container(
