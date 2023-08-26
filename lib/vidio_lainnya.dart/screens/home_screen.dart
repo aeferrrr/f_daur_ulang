@@ -163,6 +163,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ListView.builder(
                 itemCount: 1 + _channel.videos.length,
                 itemBuilder: (BuildContext context, int index) {
+                  if (index == 0) {
+                    return _buildProfileInfo();
+                  }
                   Video video = _channel.videos[index - 1];
                   return _buildVideo(video);
                 },
