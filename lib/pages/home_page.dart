@@ -93,7 +93,7 @@ class HeaderSection extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(12),
                   child: Icon(
-                    Icons.person_3,
+                    Icons.person_2_sharp,
                     color: Colors.white,
                   ),
                 ),

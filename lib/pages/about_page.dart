@@ -37,18 +37,12 @@ class _AboutPageState extends State<AboutPage> {
     );
   }
 
-  Widget _buildCurvedAppBar(BuildContext context) {
+ Widget _buildCurvedAppBar(BuildContext context) {
     return ClipPath(
       clipper: CustomAppBarClipper(),
       child: Container(
         height: 200,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        color: Colors.deepPurple[800], // Gunakan warna solid sebagai latar belakang
         child: Center(
           child: Text(
             'About Us',
@@ -62,6 +56,7 @@ class _AboutPageState extends State<AboutPage> {
       ),
     );
   }
+
 
   Widget _buildProfileImage() {
     return Container(
@@ -78,16 +73,19 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   Widget _buildProfileCard() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10),
-      child: Card(
-        elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
+  return Container(
+    margin: EdgeInsets.symmetric(horizontal: 10),
+    child: Card(
+      color: Colors.deepPurple[800],
+      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(4),
+          topRight: Radius.circular(4),
+          bottomLeft: Radius.circular(50),
+          bottomRight: Radius.circular(4), // Melengkung pada ujung bawah kiri
         ),
+      ),
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
@@ -96,7 +94,8 @@ class _AboutPageState extends State<AboutPage> {
               Text(
                 'INSA',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -105,7 +104,7 @@ class _AboutPageState extends State<AboutPage> {
                 'Sebuah App yang menyajikan informasi bagi pengguna',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey,
+                  color: Colors.grey[200],
                 ),
               ),
               SizedBox(height: 40),

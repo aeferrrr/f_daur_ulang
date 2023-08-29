@@ -133,8 +133,8 @@ class _AnorganikPageState extends State<AnorganikPage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(255, 255, 255, 255)!,
-                    const Color.fromARGB(255, 254, 246, 255)!
+                    Color.fromARGB(255, 255, 255, 255),
+                    const Color.fromARGB(255, 254, 246, 255)
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
