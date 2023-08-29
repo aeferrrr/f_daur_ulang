@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
 
+
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
 
@@ -15,8 +16,8 @@ class _AnorganikPageState extends State<AnorganikPage> {
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
       body: SafeArea(
@@ -132,8 +133,8 @@ class _AnorganikPageState extends State<AnorganikPage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(255, 255, 255, 255)!,
-                    const Color.fromARGB(255, 254, 246, 255)!
+                    Color.fromARGB(255, 255, 255, 255),
+                    const Color.fromARGB(255, 254, 246, 255)
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -174,7 +175,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
             ),
 
             SizedBox(
-              height: 25,
+              height: 16,
             ),
             // CONTAINER UTAMA
             Expanded(

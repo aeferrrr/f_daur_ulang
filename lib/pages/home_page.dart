@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/anorganik_page.dart';
 import 'package:flutter_daur_ulang/organik/organik_page.dart';
+import 'package:flutter_daur_ulang/pages/about_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/screens/home_screen.dart';
 
@@ -26,7 +27,6 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
@@ -77,14 +77,25 @@ class HeaderSection extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
+                InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
+                    ),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
                     color: Colors.blue[600],
-                    borderRadius: BorderRadius.circular(12)),
-                padding: EdgeInsets.all(12),
-                child: Icon(
-                  Icons.notifications,
-                  color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: EdgeInsets.all(12),
+                  child: Icon(
+                    Icons.person_2_sharp,
+                    color: Colors.white,
+                  ),
                 ),
               )
             ],
