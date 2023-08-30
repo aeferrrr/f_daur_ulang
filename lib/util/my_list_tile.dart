@@ -15,7 +15,7 @@ class MyListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
+      padding: const EdgeInsets.only(bottom: 25.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -47,7 +47,7 @@ class MyListTile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 12,
+                    height: 10,
                   ),
                   Text(
                     tileSubtitle,

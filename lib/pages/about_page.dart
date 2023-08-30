@@ -20,6 +20,9 @@ class _AboutPageState extends State<AboutPage> {
           _buildProfileImage(),
           SizedBox(height: 16),
           _buildProfileCard(),
+        //   SizedBox(height: 16), // Menambah spasi
+        // _buildImageCard(), 
+
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -37,12 +40,13 @@ class _AboutPageState extends State<AboutPage> {
     );
   }
 
- Widget _buildCurvedAppBar(BuildContext context) {
+  Widget _buildCurvedAppBar(BuildContext context) {
     return ClipPath(
       clipper: CustomAppBarClipper(),
       child: Container(
         height: 200,
-        color: Colors.deepPurple[800], // Gunakan warna solid sebagai latar belakang
+        color: Colors
+            .blue[800], // Gunakan warna solid sebagai latar belakang
         child: Center(
           child: Text(
             'About Us',
@@ -57,11 +61,10 @@ class _AboutPageState extends State<AboutPage> {
     );
   }
 
-
   Widget _buildProfileImage() {
     return Container(
-      width: 220,
-      height: 160,
+      width: 200,
+      height: 100,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         image: DecorationImage(
@@ -71,43 +74,68 @@ class _AboutPageState extends State<AboutPage> {
       ),
     );
   }
+  // Widget _buildImageCard() {
+  //   return Card(
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.circular(8),
+  //     ),
+  //     child: Container(
+  //       width: 50,
+  //       height: 50,
+  //       decoration: BoxDecoration(
+  //         image: DecorationImage(
+  //           image: AssetImage('images/youtube.png'),
+  //           fit: BoxFit.cover,
+  //         ),
+  //       ),
+  //     ),
+      
+  //   );
+  // }
 
   Widget _buildProfileCard() {
-  return Container(
-    margin: EdgeInsets.symmetric(horizontal: 10),
-    child: Card(
-      color: Colors.deepPurple[800],
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(4),
-          topRight: Radius.circular(4),
-          bottomLeft: Radius.circular(50),
-          bottomRight: Radius.circular(4), // Melengkung pada ujung bawah kiri
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 10),
+      child: Card(
+        color: Colors.grey[150],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
         ),
-      ),
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(16), // Mengurangi padding
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'INSA',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Deskripsi',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(height: 8),
               Text(
-                'Sebuah App yang menyajikan informasi bagi pengguna',
+                'Aplikasi INSA (Inovate Sampah) berbasis android adalah suatu aplikasi mobile android yang menjadi salah satu solusi masalah sampah yang ada di masyarakat dan secara tidak langsung aplikasi ini mempunyai nilai edukasi terhadap kepedulian akan lingkungan sehingga dapat menciptakan lingkungan yang bersih dan bebas dari sampah dan dapat meningkatkan ekonomi bagi masyarakat.',
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey[200],
-                ),
+                  fontSize: 14,
+                  color: Colors.black87,
+                ), textAlign: TextAlign.justify,
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 4),
+              Text(
+                'Aplikasi ini dibangun untuk dapat mengetahui sampah yang dapat di daur ulang dan akan memberikan arahan cara mendaur ulang sampah tersebut. Terdapat dua pilihan sampah yaitu sampah organik dan anorganik. Selain itu aplikasi ini juga dilengkapi dengan tutorial cara mengolah sampah.',
+                style: TextStyle(fontSize: 14, color: Colors.black87),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 8),
+              Row(children: [
+                Image.asset('images/youtube.png'),
+                Image.asset('images/instagram.png'),
+              ],),
+              SizedBox(height: 20),
             ],
           ),
         ),
