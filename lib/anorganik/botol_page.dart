@@ -118,7 +118,7 @@ class BotolContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...',
+                                  'Botol yang berubah menjadi pot bunga melalui sentuhan kreativitas tangan adalah sebuah karya seni yang menggabungkan fungsionalitas dan estetika dengan cara yang unik dan inovatif. ',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +126,7 @@ class BotolContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...Nulla ea esse quis anim incididunt. Do minim velit tempor officia aliqua quis eiusmod dolor. Officia fugiat in sint et incididunt cupidatat reprehenderit mollit dolore sit nulla nulla deserunt eiusmod. Aliquip culpa sunt minim esse tempor ad ex ut occaecat elit est. Nulla elit consectetur ullamco officia sit enim proident adipisicing proident.',
+                                  'Botol yang berubah menjadi pot bunga melalui sentuhan kreativitas tangan adalah sebuah karya seni yang menggabungkan fungsionalitas dan estetika dengan cara yang unik dan inovatif. Botol tersebut mengalami transformasi yang menakjubkan, berubah dari wadah yang biasa menjadi pot bunga yang menarik dan cantik, menampilkan potensi kreatif manusia untuk mengubah barang-barang sehari-hari menjadi sesuatu yang indah dan bermanfaat. \n\n Alat-alat yang dibutuhkan untuk membuat botol ini menjadi pot bunga mencakup: \n\n •	Botol Bekas: Sebagai bahan dasar yang akan diubah menjadi pot bunga. \n\n •	Peralatan Pemotong: Gergaji atau alat pemotong khusus untuk membentuk potongan di botol. \n\n •	Cat dan Kuas: Untuk mewarnai dan menghias botol.\n\n •	Tali Gantung: Jika ingin membuat pot bunga ini digantung. \n\n •	Peralatan Penataan Tanaman: Tanah, batu kerikil, tanaman, dan perlengkapan penanaman lainnya. \n\n •	Peralatan Keamanan: Sarung tangan, kacamata, dan perlindungan lainnya untuk menjaga keselamatan saat memotong dan mengolah botol.',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +182,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'ZgaecJE_2bc',
+      initialVideoId: 'wivsgmT2vdg',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
