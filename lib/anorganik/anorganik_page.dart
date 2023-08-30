@@ -163,7 +163,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         )
                       ],
                     ),
-                  ),
+                  ), 
                   Image.asset(
                     'images/card1.png',
                     height: 80,

@@ -104,11 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black12,
-              offset: Offset(0, 1),
-              blurRadius: 6.0,
+              color: Color.fromARGB(141, 180, 9, 9),
+              offset: Offset(0, 7),
+              blurRadius: 7.0,
             ),
           ],
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Row(
           children: <Widget>[
@@ -146,38 +147,115 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('YouTube Channel'),
-      ),
-      body: _channel != null
-          ? NotificationListener<ScrollNotification>(
-              onNotification: (ScrollNotification scrollDetails) {
-                if (!_isLoading &&
-                    _channel.videos.length != int.parse(_channel.videoCount) &&
-                    scrollDetails.metrics.pixels ==
-                        scrollDetails.metrics.maxScrollExtent) {
-                  _loadMoreVideos();
-                }
-                return false;
-              },
-              child: ListView.builder(
-                itemCount: 1 + _channel.videos.length,
-                itemBuilder: (BuildContext context, int index) {
-                  if (index == 0) {
-                    return _buildProfileInfo();
-                  }
-                  Video video = _channel.videos[index - 1];
-                  return _buildVideo(video);
-                },
-              ),
-            )
-          : Center(
-              child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(
-                  Theme.of(context).primaryColor, // Red
+      backgroundColor: Colors.blue[800],
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+        margin: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'Video Lainnya..',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      '30 Aug, 2023',
+                      style: TextStyle(color: Colors.blue[200]),
+                    )
+                  ],
                 ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context); // Kembali ke halaman sebelumnya
+                  },
+                  child: Container(
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+
+            // SEARCH BAR
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue[600],
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding: EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Search',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
             ),
+            SizedBox(
+                height: 5), // Add spacing between back button and video list
+            Expanded(
+              child: _channel != null
+                  ? NotificationListener<ScrollNotification>(
+                      onNotification: (ScrollNotification scrollDetails) {
+                        if (!_isLoading &&
+                            _channel.videos.length !=
+                                int.parse(_channel.videoCount) &&
+                            scrollDetails.metrics.pixels ==
+                                scrollDetails.metrics.maxScrollExtent) {
+                          _loadMoreVideos();
+                        }
+                        return false;
+                      },
+                      child: ListView.builder(
+                        itemCount: _channel.videos.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          Video video = _channel.videos[index];
+                          return _buildVideo(video);
+                        },
+                      ),
+                    )
+                  : Center(
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
