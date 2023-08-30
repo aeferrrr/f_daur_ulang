@@ -4,11 +4,11 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: BotolPage(),
+    home: PlastikPage(),
   ));
 }
 
-class BotolPage extends StatelessWidget {
+class PlastikPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,12 +19,12 @@ class BotolPage extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
-      body: BotolContent(),
+      body: PlastikContent(),
     );
   }
 }
 
-class BotolContent extends StatelessWidget {
+class PlastikContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +42,7 @@ class BotolContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Botol Menjadi Kreasi!',
+                        'Sampah Plastik Menjadi Kreasi!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +50,7 @@ class BotolContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan mobil-mobilan dari sampah botol plastik',
+                        'Ide kreatif kerajinan tas dari sampah plastik',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +118,7 @@ class BotolContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...',
+                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana...',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +126,7 @@ class BotolContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...Nulla ea esse quis anim incididunt. Do minim velit tempor officia aliqua quis \n\n eiusmod dolor. Officia fugiat in sint et incididunt cupidatat reprehenderit mollit dolore sit nulla nulla deserunt eiusmod. Aliquip culpa sunt minim esse tempor ad ex ut occaecat elit est. Nulla elit consectetur ullamco officia sit enim proident adipisicing proident.',
+                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana. Berikut cara membuatnya \n\n1. Menyiapkan Alat dan Bahan Terlebih Dahulu \n\n Hal pertama yang harus kamu lakukan adalah menyiapkan semua bahan-bahan seperti: \n\n  - Plastik bekas kemasan Rinso berukuran besar \n  - Kain lap untuk membersihkan plastik bekas kemasan.\n  - Benang untuk menjahit beberapa bagian tas plastik.\n  - Gunting \n  - Kain polos \n  - Furing \n  - Ritsleting (opsional) \n\n2. Membersihkan Plastik Bekas Kemasan Sebelum Dipakai \n\nJika semua alat dan bahan sudah siap, Anda bisa mulai membersihkan plastik bekas kemasan Rinso. Bersihkan seluruh bagian dalamnya dengan kain lap lalu jemur sebentar di bawah sinar matahari.\n\n3. Mulai Memotong-motong Plastik Kemasan \n\nPlastik kemasan yang sudah dijemur sampai kering bisa langsung dipotong menjadi dua bagian. Kemudian, buatlah lipatan sejauh 3 cm pada ujung atas dan ujung bawah kemasan tersebut. Guntinglah lipatan-lipatan sebesar 3 cm untuk mendapatkan helai-helai plastik kecil. Anda bisa membuat 500 lipatan dari 50 bungkus plastik kemasan Rinso. \n\n4. Menganyam Potongan-Potongan Plastik \n\nCara membuat kerajinan dari plastik deterjen selanjutnya yang patut Anda lakukan adalah menganyam potongan-potongan plastik yang sudah dipotong-potong. Anyamlah potongan tersebut hingga bentuknya menyerupai baling-baling. Ujung anyaman harus berbentuk vertikal untuk mempermudah proses penggabungannya. \n\n5.Menggabungkan Anyaman-Anyaman Plastik  \n\nAnyaman-anyaman plastik yang sudah rapi tinggal disambungkan satu sama lain. Anda tinggal menyelipkan anyaman pada bagian vertikal anyaman lainnya. Proses ini harus dilakukan terus-menerus hingga anyaman berbentuk melingkar seperti kantung.\n\n6.Membuat Tali Tas dari Sisa Lipatan \n\nJika tas plastik sudah terbentuk sempurna, maka Anda bisa melanjutkan prosesnya dengan membuat tali tas. Manfaatkan sisa lipatan plastik yang sudah dianyam untuk membuat bentuk segitiga. Kemudian, hubungkan ujung segitiga dengan segitiga lainnya agar saling mengunci dan membentuk tali panjang. \n\n7. Menjahit Tali Agar Menyatu dengan Tas Plastik Anda bebas menentukan panjang tali sesuai kebutuhan dan selera. \n\nTali plastik yang sudah jadi bisa segera dijahit pada kedua ujung tas plastik. Pastikan bahwa jahitannya benar-benar kuat supaya tali tas tidak mudah sobek.\n\n8. Melapisi Bagian Dalam Tas dengan Furing Langkah terakhir dalam cara membuat kerajinan dari plastik deterjen berbentuk tas adalah melapisi bagian dalam tas dengan furing. \n\nPenggunaan furing akan membuat tas plastik lebih kuat karena terdiri dari lapisan ganda. Usahakan untuk memilih furing yang warnanya senada dengan plastik kemasan Rinso supaya tampak lebih eye catching. Anda juga bisa menambahkan ritsleting supaya tas dapat ditutup dengan sempurna.',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +182,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'ZgaecJE_2bc',
+      initialVideoId: 'uEg40bX8rzc',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
