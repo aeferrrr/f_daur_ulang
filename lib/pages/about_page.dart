@@ -20,8 +20,8 @@ class _AboutPageState extends State<AboutPage> {
           _buildProfileImage(),
           SizedBox(height: 16),
           _buildProfileCard(),
-          SizedBox(height: 16), // Menambah spasi
-        _buildImageCard(), 
+        //   SizedBox(height: 16), // Menambah spasi
+        // _buildImageCard(), 
 
         ],
       ),
@@ -74,24 +74,24 @@ class _AboutPageState extends State<AboutPage> {
       ),
     );
   }
-  Widget _buildImageCard() {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Container(
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/youtube.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
+  // Widget _buildImageCard() {
+  //   return Card(
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.circular(8),
+  //     ),
+  //     child: Container(
+  //       width: 50,
+  //       height: 50,
+  //       decoration: BoxDecoration(
+  //         image: DecorationImage(
+  //           image: AssetImage('images/youtube.png'),
+  //           fit: BoxFit.cover,
+  //         ),
+  //       ),
+  //     ),
       
-    );
-  }
+  //   );
+  // }
 
   Widget _buildProfileCard() {
     return Container(
@@ -130,8 +130,12 @@ class _AboutPageState extends State<AboutPage> {
                 style: TextStyle(fontSize: 14, color: Colors.black87),
                 textAlign: TextAlign.justify,
               ),
-
-              SizedBox(height: 40),
+              SizedBox(height: 8),
+              Row(children: [
+                Image.asset('images/youtube.png'),
+                Image.asset('images/instagram.png'),
+              ],),
+              SizedBox(height: 20),
             ],
           ),
         ),
