@@ -3,6 +3,7 @@ import 'package:flutter_daur_ulang/anorganik/anorganik_page.dart';
 import 'package:flutter_daur_ulang/organik/organik_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/screens/home_screen.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
 }
 
 class HeaderSection extends StatelessWidget {
+  TextEditingController _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -71,7 +73,7 @@ class HeaderSection extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      '30 Aug, 2023',
+                      DateFormat('dd MMM, yyyy').format(DateTime.now()),
                       style: TextStyle(color: Colors.blue[200]),
                     )
                   ],
@@ -106,11 +108,13 @@ class HeaderSection extends StatelessWidget {
                 ),
                 SizedBox(width: 5),
                 Flexible(
-                  child: Text(
-                    'Search',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+                  child: TextField(
+                    controller: _searchController,
+                    decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: TextStyle(
+                          color: const Color.fromARGB(255, 119, 61, 61),
+                        )),
                   ),
                 ),
               ],
