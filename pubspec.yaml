@@ -61,7 +61,6 @@ flutter:
     - assets/compostable.png
     - assets/organiccc.png
     - assets/recycling.png
-    - assets/Logoinsa.png
     - images/insa.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

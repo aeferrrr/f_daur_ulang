@@ -72,7 +72,7 @@ class _organikState extends State<OrganikPage> {
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 15),
 
             // cards
             Container(
@@ -94,7 +94,7 @@ class _organikState extends State<OrganikPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Text(
                     'adalah sampah alami yang mudah membusuk & mudah terurai secara alami. ',
@@ -112,11 +112,10 @@ class _organikState extends State<OrganikPage> {
                         style: TextStyle(color: Colors.white),
                       ),
                       // card exprit
-                      Image.asset(
-                        'assets/organiccc.png',
-                        width: 30,
-                        height: 30,
-                      ),
+                      Icon(
+                        Icons.recycling,
+                        color: Colors.white,
+                      )
                     ],
                   )
                 ],
@@ -146,21 +145,21 @@ class _organikState extends State<OrganikPage> {
             ),
 
             SizedBox(
-              height: 10,
+              height: 20,
             ),
 
             // column -> stats transaction
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
                   // statitics
                   MyListTile(
-                      iconImagePath: 'assets/waste.png',
+                      iconImagePath: 'assets/recycling.png',
                       tileTitle: 'Sate ayam',
                       tileSubtitle: 'Sampah dan Daung'),
                   MyListTile(
-                      iconImagePath: 'assets/vegetable.png',
+                      iconImagePath: 'assets/compostable.png',
                       tileTitle: 'Sate ayam',
                       tileSubtitle: 'Sampah dan Daung'),
                 ],
