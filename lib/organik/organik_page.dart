@@ -79,7 +79,7 @@ class _organikState extends State<OrganikPage> {
               width: 380,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.blue[800],
+                color: Color(0xFF35155D),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
