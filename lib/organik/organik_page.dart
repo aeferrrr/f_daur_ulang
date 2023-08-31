@@ -1,8 +1,6 @@
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_daur_ulang/organik/organik_page.dart';
 
 class OrganikPage extends StatefulWidget {
   const OrganikPage({super.key});
@@ -15,69 +13,56 @@ class _organikState extends State<OrganikPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomAppBar(
-            color: Colors.white,
-            height: 45,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                      color: Colors.blue[300],
-                    )),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.person,
-                      color: Colors.blue[300],
-                    )),
-              ],
-            )),
-        backgroundColor: Colors.grey[300],
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+        ),
+        backgroundColor: Colors.grey[100],
         body: SafeArea(
             child: Column(
           children: [
             // appbar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Sampah',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Sampah',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Organik',
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    ],
-                  ),
-                  // plus button
-                  Container(
-                    padding: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      shape: BoxShape.circle,
+                        Text(
+                          'Organik',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      ],
                     ),
-                    child: Icon(Icons.add),
-                  ),
-                ],
+                    // plus button
+                    IconButton(
+                      icon: Icon(Icons.arrow_back), // Use the arrow back icon
+                      onPressed: () {
+                        Navigator.pop(context); // Navigate back
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 15),
 
             // cards
             Container(
-              width: 380,
-              padding: EdgeInsets.all(20),
+              width: 390,
+              padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.blue[800],
                 borderRadius: BorderRadius.circular(16),
@@ -85,13 +70,12 @@ class _organikState extends State<OrganikPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10),
                   Text(
                     'Sampah Organik',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 28,
-                    ),
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 5,
@@ -148,23 +132,34 @@ class _organikState extends State<OrganikPage> {
               height: 20,
             ),
 
-            // column -> stats transaction
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  // statitics
-                  MyListTile(
-                      iconImagePath: 'assets/recycling.png',
-                      tileTitle: 'Sate ayam',
-                      tileSubtitle: 'Sampah dan Daung'),
-                  MyListTile(
-                      iconImagePath: 'assets/compostable.png',
-                      tileTitle: 'Sate ayam',
-                      tileSubtitle: 'Sampah dan Daung'),
-                ],
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(25),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: ListView(
+                      children: [
+                        MyListTile(
+                          iconImagePath: 'assets/recycling.png',
+                          tileTitle: 'Sate ayam',
+                          tileSubtitle: 'Sampah dan Daun',
+                        ),
+                        MyListTile(
+                          iconImagePath: 'assets/compostable.png',
+                          tileTitle: 'Sate ayam',
+                          tileSubtitle: 'Sampah dan Daun',
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
-            ),
+            )
           ],
         )));
   }

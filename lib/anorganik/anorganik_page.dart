@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
 
-
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
 
@@ -163,7 +162,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         )
                       ],
                     ),
-                  ), 
+                  ),
                   Image.asset(
                     'images/card1.png',
                     height: 80,
@@ -235,9 +234,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                                     color: Colors.white,
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 12,
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,

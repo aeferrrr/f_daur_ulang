@@ -25,12 +25,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-        ],
-      ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+        ),
       body: SafeArea(
         child: ListView(
           children: [
@@ -77,12 +77,13 @@ class HeaderSection extends StatelessWidget {
                   ],
                 ),
               ),
-                InkWell(
+              InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
+                      builder: (context) =>
+                          AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
                     ),
                   );
                 },
@@ -108,20 +109,21 @@ class HeaderSection extends StatelessWidget {
             ),
             padding: EdgeInsets.all(12),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Flexible(
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(width: 5),
                 Flexible(
                   child: Text(
                     'Search',
                     style: TextStyle(
                       color: Colors.white,
                     ),
+                  ),
+                ),
+                SizedBox(width: 20),
+                Flexible(
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white,
                   ),
                 ),
               ],
