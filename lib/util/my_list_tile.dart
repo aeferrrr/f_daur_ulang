@@ -16,7 +16,7 @@ class MyListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 25.0),
+        padding: const EdgeInsets.only(bottom: 5.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -24,22 +24,15 @@ class MyListTile extends StatelessWidget {
               children: [
                 // icon
                 Container(
-                  height: 80,
-                  padding: EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.pink[100],
-                    borderRadius: BorderRadius.circular(12),
-                  ),
                   child: Image.asset(iconImagePath),
                 ),
-    
+
                 SizedBox(
                   width: 20,
                 ),
-    
+
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  
                   children: [
                     Text(
                       tileTitle,
@@ -49,13 +42,13 @@ class MyListTile extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     Text(
                       tileSubtitle,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.grey[700],
+                        color: Colors.black,
                       ),
                     ),
                   ],

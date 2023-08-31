@@ -1,6 +1,9 @@
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_daur_ulang/organik/daun_page.dart';
+import 'package:flutter_daur_ulang/organik/buah_page.dart';
+import 'package:flutter_daur_ulang/organik/sayur_page.dart';
 
 class OrganikPage extends StatefulWidget {
   const OrganikPage({super.key});
@@ -64,7 +67,7 @@ class _organikState extends State<OrganikPage> {
               width: 390,
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                color: Color(0xFF35155D),
+                color: Colors.blue[800],
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
@@ -114,16 +117,47 @@ class _organikState extends State<OrganikPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // 1buttons
-                  MyButton(
+                  // Button 1
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DaunPage()),
+                      );
+                    },
+                    child: MyButton(
                       iconImagePath: 'assets/recycling.png',
-                      buttonText: 'Sampah Daun'),
-                  MyButton(
+                      buttonText: 'Sampah Daun',
+                    ),
+                  ),
+
+                  // Button 2
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BuahPage()),
+                      );
+                    },
+                    child: MyButton(
                       iconImagePath: 'assets/compostable.png',
-                      buttonText: 'Sampah Buah'),
-                  MyButton(
+                      buttonText: 'Sampah Buah',
+                    ),
+                  ),
+
+                  // Button 3
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SayurPage()),
+                      );
+                    },
+                    child: MyButton(
                       iconImagePath: 'assets/organiccc.png',
-                      buttonText: 'Sampah Sayur'),
+                      buttonText: 'Sampah Sayur',
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -144,15 +178,59 @@ class _organikState extends State<OrganikPage> {
                     padding: const EdgeInsets.all(15.0),
                     child: ListView(
                       children: [
-                        MyListTile(
-                          iconImagePath: 'assets/recycling.png',
-                          tileTitle: 'Sate ayam',
-                          tileSubtitle: 'Sampah dan Daun',
+                        Container(
+                          width: double.infinity,
+                          height: 100, // Mengatur tinggi container
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: MyListTile(
+                              iconImagePath: 'assets/recycling.png',
+                              tileTitle: 'Sampah Daun:',
+                              tileSubtitle:
+                                  'sampah daun bisa dijadikan \npupuk kompos yang bermanfaat.',
+                            ),
+                          ),
                         ),
-                        MyListTile(
-                          iconImagePath: 'assets/compostable.png',
-                          tileTitle: 'Sate ayam',
-                          tileSubtitle: 'Sampah dan Daun',
+                        SizedBox(height: 10),
+                        Container(
+                          width: double.infinity,
+                          height: 100, // Mengatur tinggi container
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: MyListTile(
+                              iconImagePath: 'assets/compostable.png',
+                              tileTitle: 'Sampah Buah',
+                              tileSubtitle: 'Sampah dan Daun',
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Container(
+                          width: double.infinity,
+                          height: 100, // Mengatur tinggi container
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: MyListTile(
+                              iconImagePath: 'assets/compostable.png',
+                              tileTitle: 'Sate ayam',
+                              tileSubtitle: 'Sampah dan Daun',
+                            ),
+                          ),
                         ),
                       ],
                     ),
