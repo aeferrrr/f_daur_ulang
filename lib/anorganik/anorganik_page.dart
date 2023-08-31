@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
+import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
 
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
@@ -219,7 +220,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => BotolPage()));
+                                    builder: (context) => PlastikPage()));
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,

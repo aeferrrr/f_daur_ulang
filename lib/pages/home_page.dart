@@ -4,6 +4,7 @@ import 'package:flutter_daur_ulang/organik/organik_page.dart';
 import 'package:flutter_daur_ulang/pages/about_page.dart';
 import 'package:flutter_daur_ulang/util/emoticon_face.dart';
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/screens/home_screen.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,12 +26,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           children: [
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
 }
 
 class HeaderSection extends StatelessWidget {
+  TextEditingController _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -71,7 +73,7 @@ class HeaderSection extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      '30 Aug, 2023',
+                      DateFormat('dd MMM, yyyy').format(DateTime.now()),
                       style: TextStyle(color: Colors.blue[200]),
                     )
                   ],
@@ -108,23 +110,23 @@ class HeaderSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: EdgeInsets.all(12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Stack(
+              alignment: Alignment.centerRight,
               children: [
-                Flexible(
-                  child: Text(
-                    'Search',
-                    style: TextStyle(
-                      color: Colors.white,
+                TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    hintStyle: TextStyle(
+                      color: const Color.fromARGB(255, 119, 61, 61),
                     ),
+                    contentPadding: EdgeInsets.only(
+                        right: 40), // Adjust this value as needed
                   ),
                 ),
-                SizedBox(width: 20),
-                Flexible(
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
+                Icon(
+                  Icons.search,
+                  color: Colors.white,
                 ),
               ],
             ),
