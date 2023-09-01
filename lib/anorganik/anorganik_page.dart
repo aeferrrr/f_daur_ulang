@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
+import 'package:flutter_daur_ulang/anorganik/kaleng_page.dart';
 import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
+import 'package:intl/intl.dart';
 
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
@@ -48,8 +50,9 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           SizedBox(
                             height: 8,
                           ),
+                          SizedBox(height: 8),
                           Text(
-                            '30 Aug, 2023',
+                            DateFormat('dd MMM, yyyy').format(DateTime.now()),
                             style: TextStyle(color: Colors.blue[200]),
                           )
                         ],
@@ -264,17 +267,14 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           ),
                         ),
                       ),
-
                       SizedBox(
                         height: 8,
                       ),
-
-                      // ISI DALAM CONTAINER UTAMA
                       Container(
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         child: InkWell(
                           onTap: () {
@@ -290,20 +290,17 @@ class _AnorganikPageState extends State<AnorganikPage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(12),
                                 child: Container(
-                                    padding: EdgeInsets.all(16),
-                                    color: Color(0xFFf6c445),
-                                    child: Icon(
-                                      Icons.shopping_bag_sharp,
-                                      color: Colors.white,
-                                    )),
-                              ),
-                              SizedBox(
-                                height: 12,
+                                  padding: EdgeInsets.all(16),
+                                  color: Color.fromARGB(255, 255, 162, 48),
+                                  child: Icon(
+                                    Icons.shopping_bag,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  // title
                                   Text(
                                     'Sampah Plastik',
                                     style: TextStyle(
@@ -314,9 +311,67 @@ class _AnorganikPageState extends State<AnorganikPage> {
                                   SizedBox(
                                     height: 8,
                                   ),
-                                  // subtitle
                                   Text(
-                                    'Sampah Plastik bisa di daur ulang',
+                                    'Plastik bisa di daur ulang',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Icon(Icons.more_horiz)
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            // Navigasi ke halaman selanjutnya di sini
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => KalengPage()));
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Container(
+                                  padding: EdgeInsets.all(16),
+                                  color: Color.fromARGB(255, 9, 124, 255),
+                                  child: Icon(
+                                    Icons.local_drink,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Kaleng Bekas',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Kaleng bisa di daur ulang',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,

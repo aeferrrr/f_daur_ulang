@@ -271,14 +271,13 @@ class _RecyclingSectionState extends State<RecyclingSection> {
                             'Sampah Organik',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 8),
                           Text(
                             'Ada 2 contoh sampah organik',
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
                               fontSize: 14,
                               color: Colors.grey,
                             ),
@@ -326,14 +325,13 @@ class _RecyclingSectionState extends State<RecyclingSection> {
                             'Sampah Anorganik',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 8),
                           Text(
                             'Ada 2 contoh sampah Anorganik',
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
                               fontSize: 14,
                               color: Colors.grey,
                             ),
@@ -381,14 +379,13 @@ class _RecyclingSectionState extends State<RecyclingSection> {
                             'Kreasi Lainnya',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 8),
                           Text(
                             'Berkreasilah dan menginspirasi!',
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
                               fontSize: 14,
                               color: Colors.grey,
                             ),
