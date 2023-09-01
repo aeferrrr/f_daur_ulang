@@ -95,7 +95,7 @@ class _organikState extends State<OrganikPage> {
                     children: [
                       // card number
                       Text(
-                        'Seperti : sisa daun, buah, sayur dll.',
+                        'Seperti : sisa daun, kulit telur, batok kelapa dll.',
                         style: TextStyle(color: Colors.white),
                       ),
                       // card exprit

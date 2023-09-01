@@ -3,7 +3,7 @@ import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_daur_ulang/organik/sayur_page.dart';
+
 
 
 class AnorganikPage extends StatefulWidget {
@@ -137,7 +137,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PlastikPage()),
+                        MaterialPageRoute(builder: (context) => BotolPage()),
                       );
                     },
                     child: MyButton(
@@ -151,7 +151,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SayurPage()),
+                        MaterialPageRoute(builder: (context) => PlastikPage()),
                       );
                     },
                     child: MyButton(
