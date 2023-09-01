@@ -2,8 +2,8 @@ import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/organik/daun_page.dart';
-import 'package:flutter_daur_ulang/organik/buah_page.dart';
-import 'package:flutter_daur_ulang/organik/sayur_page.dart';
+import 'package:flutter_daur_ulang/organik/telur_page.dart';
+import 'package:flutter_daur_ulang/organik/kelapa_page.dart';
 
 class OrganikPage extends StatefulWidget {
   const OrganikPage({super.key});
@@ -136,12 +136,12 @@ class _organikState extends State<OrganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BuahPage()),
+                        MaterialPageRoute(builder: (context) => TelurPage()),
                       );
                     },
                     child: MyButton(
                       iconImagePath: 'assets/compostable.png',
-                      buttonText: 'Sampah Buah',
+                      buttonText: 'Sampah Kulit Telur',
                     ),
                   ),
 
@@ -150,12 +150,12 @@ class _organikState extends State<OrganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SayurPage()),
+                        MaterialPageRoute(builder: (context) => KelapaPage()),
                       );
                     },
                     child: MyButton(
                       iconImagePath: 'assets/organiccc.png',
-                      buttonText: 'Sampah Sayur',
+                      buttonText: 'Sampah Batok Kelapa',
                     ),
                   ),
                 ],
@@ -209,7 +209,7 @@ class _organikState extends State<OrganikPage> {
                             padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Buah',
+                              tileTitle: 'Sampah Kulit Telur',
                               tileSubtitle: 'Sampah dan Daun',
                             ),
                           ),
@@ -227,7 +227,7 @@ class _organikState extends State<OrganikPage> {
                             padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Sayur',
+                              tileTitle: 'Sampah Batok Kelapa',
                               tileSubtitle: 'Sampah sayur digunakan',
                             ),
                           ),
