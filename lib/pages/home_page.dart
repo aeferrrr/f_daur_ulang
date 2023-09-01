@@ -28,8 +28,8 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
       body: SafeArea(
@@ -79,12 +79,13 @@ class HeaderSection extends StatelessWidget {
                   ],
                 ),
               ),
-                InkWell(
+              InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
+                      builder: (context) =>
+                          AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
                     ),
                   );
                 },
@@ -109,24 +110,23 @@ class HeaderSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: EdgeInsets.all(12),
-            child: Row(
+            child: Stack(
+              alignment: Alignment.centerRight,
               children: [
-                Flexible(
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.white,
+                TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    hintStyle: TextStyle(
+                      color: const Color.fromARGB(255, 119, 61, 61),
+                    ),
+                    contentPadding: EdgeInsets.only(
+                        right: 40), // Adjust this value as needed
                   ),
                 ),
-                SizedBox(width: 5),
-                Flexible(
-                  child: TextField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                        hintText: 'Search',
-                        hintStyle: TextStyle(
-                          color: const Color.fromARGB(255, 119, 61, 61),
-                        )),
-                  ),
+                Icon(
+                  Icons.search,
+                  color: Colors.white,
                 ),
               ],
             ),

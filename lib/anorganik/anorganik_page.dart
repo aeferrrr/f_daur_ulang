@@ -236,9 +236,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: 12,
-                              ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

@@ -24,7 +24,7 @@ class MyButton extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.grey,
-                blurRadius: 30,
+                blurRadius: 15,
                 spreadRadius: 2,
               ),
             ],
