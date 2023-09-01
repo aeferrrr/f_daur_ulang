@@ -10,19 +10,19 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   int _currentIndex = 0;
 
+   
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
+        // Menggunakan ListView agar kontennya bisa digulir
         children: [
           _buildCurvedAppBar(context),
           SizedBox(height: 10),
           _buildProfileImage(),
           SizedBox(height: 16),
           _buildProfileCard(),
-        //   SizedBox(height: 16), // Menambah spasi
-        // _buildImageCard(), 
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -45,53 +45,46 @@ class _AboutPageState extends State<AboutPage> {
       clipper: CustomAppBarClipper(),
       child: Container(
         height: 200,
-        color: Colors
-            .blue[800], // Gunakan warna solid sebagai latar belakang
-        child: Center(
-          child: Text(
-            'About Us',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+        color: Colors.blue[800],
+        child: Stack(
+          // Menggunakan Stack untuk menambahkan tombol back
+          children: [
+            IconButton(
+              icon: Icon(Icons.arrow_back), // Use the arrow back icon
+              onPressed: () {
+                Navigator.pop(context); // Navigate back
+              },
             ),
-          ),
+            Center(
+              child: Text(
+                'About Us',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 
+
   Widget _buildProfileImage() {
     return Container(
       width: 200,
-      height: 100,
+      height: 200,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         image: DecorationImage(
           image: AssetImage('images/insa.png'),
-          fit: BoxFit.cover,
+         
         ),
       ),
     );
   }
-  // Widget _buildImageCard() {
-  //   return Card(
-  //     shape: RoundedRectangleBorder(
-  //       borderRadius: BorderRadius.circular(8),
-  //     ),
-  //     child: Container(
-  //       width: 50,
-  //       height: 50,
-  //       decoration: BoxDecoration(
-  //         image: DecorationImage(
-  //           image: AssetImage('images/youtube.png'),
-  //           fit: BoxFit.cover,
-  //         ),
-  //       ),
-  //     ),
-      
-  //   );
-  // }
 
   Widget _buildProfileCard() {
     return Container(
@@ -102,18 +95,16 @@ class _AboutPageState extends State<AboutPage> {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: EdgeInsets.all(16), // Mengurangi padding
+          padding: EdgeInsets.all(16),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, // Justify ke kiri
             children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  'Deskripsi',
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+              Text(
+                'Deskripsi',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 8),
@@ -122,7 +113,8 @@ class _AboutPageState extends State<AboutPage> {
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.black87,
-                ), textAlign: TextAlign.justify,
+                ),
+                textAlign: TextAlign.justify,
               ),
               SizedBox(height: 4),
               Text(
@@ -131,10 +123,12 @@ class _AboutPageState extends State<AboutPage> {
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 8),
-              Row(children: [
-                Image.asset('images/youtube.png'),
-                Image.asset('images/instagram.png'),
-              ],),
+              Row(
+                children: [
+                  Image.asset('images/youtube.png'),
+                  Image.asset('images/instagram.png'),
+                ],
+              ),
               SizedBox(height: 20),
             ],
           ),

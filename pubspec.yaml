@@ -58,10 +58,15 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/card1.png
     - assets/compostable.png
     - assets/organiccc.png
     - assets/recycling.png
+    - assets/bottle.png
+    - assets/recycled-plastic.png
+    - assets/box.png
+    - images/degradable-plastic.png
+    - images/recycle-packaging.png
+    - images/trash-bin.png
     - images/insa.png
     - images/youtube.png
     - images/instagram.png
