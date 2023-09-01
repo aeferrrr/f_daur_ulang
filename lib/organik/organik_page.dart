@@ -64,7 +64,7 @@ class _organikState extends State<OrganikPage> {
 
             // cards
             Container(
-              width: 390,
+              width: 350,
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.blue[800],
@@ -180,9 +180,9 @@ class _organikState extends State<OrganikPage> {
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: Colors.blue[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -199,9 +199,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: Colors.green[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -217,9 +217,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.purple,
+                            color: Colors.purple[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
