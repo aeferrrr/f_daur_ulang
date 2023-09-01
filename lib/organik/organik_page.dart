@@ -168,19 +168,19 @@ class _organikState extends State<OrganikPage> {
 
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(25),
+                padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: ListView(
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 100, // Mengatur tinggi container
+                          height: 115,
                           decoration: BoxDecoration(
                             color: Colors.blue,
                             border: Border.all(color: Colors.grey),
@@ -192,14 +192,14 @@ class _organikState extends State<OrganikPage> {
                               iconImagePath: 'assets/recycling.png',
                               tileTitle: 'Sampah Daun:',
                               tileSubtitle:
-                                  'sampah daun bisa dijadikan \npupuk kompos yang bermanfaat.',
+                                  'sampah daun bisa dijadikan \npupuk kompos yang\nbermanfaat.',
                             ),
                           ),
                         ),
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 100, // Mengatur tinggi container
+                          height: 115,
                           decoration: BoxDecoration(
                             color: Colors.green,
                             border: Border.all(color: Colors.grey),
@@ -217,9 +217,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 100, // Mengatur tinggi container
+                          height: 115,
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: Colors.purple,
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -227,8 +227,8 @@ class _organikState extends State<OrganikPage> {
                             padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sate ayam',
-                              tileSubtitle: 'Sampah dan Daun',
+                              tileTitle: 'Sampah Sayur',
+                              tileSubtitle: 'Sampah sayur digunakan',
                             ),
                           ),
                         ),
