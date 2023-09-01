@@ -220,7 +220,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PlastikPage()));
+                                    builder: (context) => BotolPage()));
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -285,7 +285,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => AnorganikPage()));
+                                    builder: (context) => PlastikPage()));
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
