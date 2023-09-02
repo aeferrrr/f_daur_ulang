@@ -4,11 +4,11 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: KalengPage(),
+    home: KardusPage(),
   ));
 }
 
-class KalengPage extends StatelessWidget {
+class KardusPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,12 +19,12 @@ class KalengPage extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
-      body: PlastikContent(),
+      body: KardusContent(),
     );
   }
 }
 
-class PlastikContent extends StatelessWidget {
+class KardusContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +42,7 @@ class PlastikContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Kaleng Bekas Menjadi Kreasi!',
+                        'Kardus Bekas Menjadi Kreasi!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +50,7 @@ class PlastikContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif membuat asbak dari kaleng minuman',
+                        'Ide kreatif membuat kardus bekas menjadi mesin atm',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +118,7 @@ class PlastikContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Pada kali ini kami akan memberikan sebuah tutorial tentang daur ulang minuman kaleng yaitu larutan cap badak.',
+                                  'Membuat mesin ATM mainan dari kardus adalah proyek kreatif yang aman dan edukatif untuk anak-anak. Ini adalah cara yang bagus untuk mengajarkan konsep dasar perbankan dan pengelolaan uang kepada mereka.',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +126,7 @@ class PlastikContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Pada kali ini kami akan memberikan sebuah tutorial tentang daur ulang minuman kaleng yaitu larutan cap badak.\n\nBiasanya kaleng minuman ini akan dibuang ketika sudah habis isinya atau dikumpulkan kaleng tesebut lalu dijual. Nah dari pada dibuang yang hanya menambah limbah sampah. Coba dulu nih tutorial dibawah, bagaimana sahabat bisa mengubahnya menjadi asbak yang yang berguna buat para perokok untuk membuat ampas rokok.Tak usah lama-lama lagi, mari kita daur ulang kaleng bekas ini..\n\nCara membuatnya :\n1. Siapkan Kaleng Bekas\n2. Ambil board maker / spidol papan, lalu buat garis melingkar pada kaleng.\n3. Buat garis yang kedua di atas garis sebelumnya.\n4. Lalu potong bagian atas kaleng, bukan yang bergaris ya.\n5. Gunting untuk meratakan sisi kaleng.\n6. Gunting sampai garis bagian bawah memutar sampai bagian akhir kaleng.\n7. Ambil gunting, kita pakai untuk meluruskan kaleng.\n8. Kita anyam dengan metode miring searah jarum jam.\n9. Anyam sampai akhir ya.\n10. Sekarang kaleng bekas minuman bisa digunakan sebagai asbak.',
+                                  'Membuat mesin ATM mainan dari kardus adalah proyek kreatif yang aman dan edukatif untuk anak-anak. Ini adalah cara yang bagus untuk mengajarkan konsep dasar perbankan dan pengelolaan uang kepada mereka. Berikut adalah panduan langkah demi langkah untuk membuat mesin ATM mainan dari kardus:\n\nBahan yang Anda butuhkan:\n1. Sebuah kotak kardus besar.\n2. Gunting.\n3. Cat atau spidol.\n4. Kertas dan stiker warna-warn.\n5. Jarum pentul.\n6. Lem (opsional).\n7. Pita pengukur (opsional).\n\nLangkah-langkah:\n1. Siapkan kotak kardus Anda:\n - Tutup kotak kardus dan pastikan itu dalam kondisi baik.\n- Potong bagian atas kotak (tutup) sehingga Anda dapat melihat ke dalam kotak dengan mudah. Ini akan menjadi layar mesin ATM.\n\n2. Desain layar:\n - Gunakan cat atau spidol untuk menggambar tampilan ATM pada bagian dalam tutup kotak. Anda dapat menggambar gambar seperti slot kartu ATM, layar sentuh, tombol, dan antarmuka pengguna lainnya. Gunakan imajinasi Anda dan tambahkan detail sesuai keinginan.\n\n3. Buat slot kartu ATM:\n - Potong lubang kecil pada salah satu sisi kotak untuk membuat slot kartu ATM. Pastikan slotnya cukup besar untuk memasukkan kartu mainan dengan mudah.\n\n4. Tambahkan tombol:\n - Gunakan potongan kertas atau stiker warna-warni untuk membuat tombol-tombol di sekitar layar ATM. Anda dapat menambahkan tombol angka, tombol penarikan, dan tombol lainnya.\n\n5. Tambahkan stiker atau gambar untuk dekorasi:\n - Hiasi kotak kardus Anda dengan stiker atau gambar yang relevan dengan mesin ATM.\n\n6. Buat rekening mainan:\n - Potong potongan kertas berbentuk kartu ATM yang dapat digunakan sebagai "kartu rekening" mainan. Anda bisa memberi warna atau menambahkan stiker pada kartu-kartu ini.\n\n7. Buat saldo mainan:\n - Tambahkan "saldo" mainan dalam bentuk uang kertas palsu atau koin mainan di dalam kotak. Ini bisa digunakan untuk bermain peran bertransaksi di mesin ATM.\n\n8. Anda bisa menambahkan pita pengukur di sekitar layar ATM untuk memberikan tampilan yang lebih realistis.\n\n9. selesai',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +182,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'DuwSq1VOWKg',
+      initialVideoId: 'JYG4MS-tsck',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

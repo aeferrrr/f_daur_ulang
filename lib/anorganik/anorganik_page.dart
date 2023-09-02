@@ -1,7 +1,6 @@
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
-import 'package:flutter_daur_ulang/anorganik/kaleng_page.dart';
+import 'package:flutter_daur_ulang/anorganik/kardus_page.dart';
 import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class AnorganikPage extends StatefulWidget {
 }
 
 class _AnorganikPageState extends State<AnorganikPage> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
@@ -94,83 +93,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            'Sampah Anorganik',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          SizedBox(height: 8),
-                          Text(
-                            DateFormat('dd MMM, yyyy').format(DateTime.now()),
-                            style: TextStyle(color: Colors.blue[200]),
-                          )
-                        ],
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pop(
-                              context); // Kembali ke halaman sebelumnya
-                        },
-                        child: Container(
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-
-                  SizedBox(
-                    height: 25,
-                  ),
-
-                  // SEARCH BAR
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    padding: EdgeInsets.all(12),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.search,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          'Search',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 25,
-                  ),
-
-                  // UNTUK TEXT
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
                       // card number
                       Text(
                         'Seperti : botol,plastic dan kardus.',
@@ -214,7 +136,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BotolPage()),
+                        MaterialPageRoute(builder: (context) => PlastikPage()),
                       );
                     },
                     child: MyButton(
@@ -228,7 +150,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PlastikPage()),
+                        MaterialPageRoute(builder: (context) => KardusPage()),
                       );
                     },
                     child: MyButton(
@@ -288,7 +210,8 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             child: MyListTile(
                               iconImagePath: 'images/degradable-plastic.png',
                               tileTitle: 'Sampah Plastic ',
-                              tileSubtitle: 'Sampah plastic kreasi \n dari tangan',
+                              tileSubtitle:
+                                  'Sampah plastic kreasi \n dari tangan',
                             ),
                           ),
                         ),
@@ -313,226 +236,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                       ],
                     ),
                   ),
-                  Image.asset(
-                    'images/card1.png',
-                    height: 80,
-                    width: 80,
-                  )
-                  // Tambahan widget lain dalam Row jika diperlukan
-                ],
-              ),
-            ),
-
-            SizedBox(
-              height: 16,
-            ),
-            // CONTAINER UTAMA
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(25),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(
-                      10), // Melengkungkan sudut kontainer
-                ),
-                child: Center(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Anorganik',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                              ),
-                            ),
-                          ),
-                          // Widget lainnya di sini
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            // Navigasi ke halaman selanjutnya di sini
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BotolPage()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  color: Color(0xFFa0e548),
-                                  child: Icon(
-                                    Icons.wine_bar_sharp,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Sampah Botol',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Botol bisa di daur ulang',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Icon(Icons.more_horiz)
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            // Navigasi ke halaman selanjutnya di sini
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => PlastikPage()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  color: Color.fromARGB(255, 255, 162, 48),
-                                  child: Icon(
-                                    Icons.shopping_bag,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Sampah Plastik',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Plastik bisa di daur ulang',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Icon(Icons.more_horiz)
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            // Navigasi ke halaman selanjutnya di sini
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => KalengPage()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  color: Color.fromARGB(255, 9, 124, 255),
-                                  child: Icon(
-                                    Icons.local_drink,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Kaleng Bekas',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Kaleng bisa di daur ulang',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Icon(Icons.more_horiz)
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-
                 ),
               ),
             )
@@ -540,4 +243,3 @@ class _AnorganikPageState extends State<AnorganikPage> {
         )));
   }
 }
-
