@@ -2,29 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: BotolPage(),
-  ));
+class TelurPage extends StatefulWidget {
+  const TelurPage({super.key});
+
+  @override
+  State<TelurPage> createState() => _TelurPageState();
 }
 
-class BotolPage extends StatelessWidget {
+class _TelurPageState extends State<TelurPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-      body: BotolContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class BotolContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +43,7 @@ class BotolContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Sampah Kulit Telur Menjadi Kolase Ikan!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +51,7 @@ class BotolContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan mobil-mobilan dari sampah botol plastik',
+                        'Ide kreatif Membuat Kolase Ikan dari Kulit Telur',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +119,7 @@ class BotolContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Botol yang berubah menjadi pot bunga melalui sentuhan kreativitas tangan adalah sebuah karya seni yang menggabungkan fungsionalitas dan estetika dengan cara yang unik dan inovatif.',
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah...',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,9 +127,7 @@ class BotolContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...Nulla ea esse quis anim incididunt. Do minim velit tempor officia aliqua quis \n\n eiusmod dolor. Officia fugiat in sint et incididunt cupidatat reprehenderit mollit dolore sit nulla nulla deserunt eiusmod. Aliquip culpa sunt minim esse tempor ad ex ut occaecat elit est. Nulla elit consectetur ullamco officia sit enim proident adipisicing proident.',
-                                 
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah. \n\nDaripada mereka bermain gadget, mengajak mereka memanfaatkan bahan-bahan rumah yang tidak terpakai bisa menjadi hal yang mengasyiknya.Kali ini kita akan mengajak bunda dan anak untuk membuat kolase dari kulit telur, simak caranya ya : \n\nBahan-bahan yang perlu disiapkan : \n\n• 4 kulit telur \n• Lem \n• Cat air \n• Cutton but \n• Kertas bergambar bebas  \n\nCara Membuatnya : \n\n1. Cuci kulit telur dengan sabun supaya tidak berbau amis, kemudian bilas menggunakan air bersih. Jemur kulit telur di bawah sinar matahari selama kurang lebih 1 jam sampai benar-benar kering.\n\n2. Kupas kulit air, agar mudah saat memberi lem nantinya.\n\n3. Setelah kita mempersiapkan kulit telur. Kini saatnya untuk mulai membuat kolase.\n\n4.Balur lem menggunakan cutton bud di area kertas yang bergambar. Misal, bunda telah menyiapkan kertas dengan gambar rumah. Maka balur lem pada gambar rumah tersebut.\n\n5. Bunda mungkin bisa mengarahkan anak untuk membalurkan lem sedikit demi sedikit diarea bergambar. Diselingi dengan menempelkan kulit telur yang sudah dipotong kecil-kecil di atas lem, supaya lem di kertas tidak kering terlebih dahulu.\n\n6. Jika seluruh gambar telah tertutupi dengan kulit telur, maka kolase telah terbentuk. Namun, agar lebih cantik Bunda dan anak bisa memberinya cat air sesuai dengan selera warnanya.\n\n7. Tunggu sampai cat air kering dan selesai.\n\nGimana Bund, mudah bukan? Ajak selalu anak berkreasi dengan memanfaatkan bahan-bahan rumah tangga yang tidak terpakai ya Bund. Di samping melatih motorik anak, kita juga bisa mengurangi penumpukan sampah.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -184,7 +183,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'wivsgmT2vdg',
+      initialVideoId: 'OPRUUFGZvFU',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

@@ -2,29 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: BotolPage(),
-  ));
+
+class KelapaPage extends StatefulWidget {
+  const KelapaPage({super.key});
+
+  @override
+  State<KelapaPage> createState() => _KelapaPageState();
 }
 
-class BotolPage extends StatelessWidget {
+class _KelapaPageState extends State<KelapaPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-      body: BotolContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class BotolContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +44,7 @@ class BotolContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Sampah Tempurung Kelapa Menjadi Sendok!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +52,7 @@ class BotolContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan mobil-mobilan dari sampah botol plastik',
+                        'Ide kreatif Membuat Sendok dari Tempurung Kelapa',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +120,7 @@ class BotolContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Botol yang berubah menjadi pot bunga melalui sentuhan kreativitas tangan adalah sebuah karya seni yang menggabungkan fungsionalitas dan estetika dengan cara yang unik dan inovatif.',
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu....',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,9 +128,7 @@ class BotolContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-
-                                  'Ullamco culpa labore mollit quis fugiat nisi ex pariatur...Nulla ea esse quis anim incididunt. Do minim velit tempor officia aliqua quis \n\n eiusmod dolor. Officia fugiat in sint et incididunt cupidatat reprehenderit mollit dolore sit nulla nulla deserunt eiusmod. Aliquip culpa sunt minim esse tempor ad ex ut occaecat elit est. Nulla elit consectetur ullamco officia sit enim proident adipisicing proident.',
-                                 
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu. \n\nSekarang sendok yang terbuat dari tanah liat atau kayu sudah susah sekali ditemui. Namun kita bisa lho membuatnya sendiri. Buatnya dari Batok kelapa. \n\nBaiklah, ingin tahu cara pembuatannya bagaimana? Yuk simak dibawah proses pembuatannya. Alat dan Bahan dalam Membuat Sendok dari Bongkahan Kelapa. \n\nBerikut adalah alat dan bahannya: \n\n1. Batok kelapa kecil \n2. Stik bentuknya seperti diatas. \n3. Lem kayu \n4. Spidol \n5. Penggaris \n6. Gergaji kecil \n7. Vernis \n\nLangkah-langkah dalam Membuat Sendok dari Tempurung Kelapa: \n\n1. Pemotongan Batok Kelapa: \nPotong batok kelapa menjadi bentuk sendok makan dengan menggunakan gergaji kayu. Buat bentuk yang mirip dengan sendok makan, dengan bagian yang melengkung sebagai wadahnya dan pegangan yang lebih panjang. \n\n2. Kasarkan Permukaan: \nKasarkan permukaan batok kelapa yang telah dipotong dengan kertas pasir untuk menghaluskan tepinya. Anda bisa menghaluskan baik bagian wadah maupun pegangan sendok. \n\n3.Cat (Opsional): \nJika Anda ingin memberi warna pada sendok makan, Anda bisa menggunakan cat dan kuas untuk melukisnya sesuai selera Anda. Biarkan cat mengering dengan baik sebelum digunakan. \n\n4. Pemakaian: \nSendok makan dari batok kelapa siap digunakan untuk makanan dan minuman. Pastikan sendok telah dibersihkan dengan baik sebelum digunakan. \n\nSelamat mencoba membuat sendok makan ramah lingkungan dari batok kelapa! Ini adalah alternatif yang baik untuk mengurangi penggunaan plastik dan bahan-bahan sekali pakai.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -184,7 +184,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'wivsgmT2vdg',
+      initialVideoId: 'TL8oTqUzXdA',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
