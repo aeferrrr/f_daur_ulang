@@ -3,6 +3,7 @@ import 'package:flutter_daur_ulang/vidio_lainnya.dart/models/channel_model.dart'
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/models/video_models.dart';
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/screens/video_screen.dart';
 import 'package:flutter_daur_ulang/vidio_lainnya.dart/services/api_services.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -175,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 8,
                     ),
                     Text(
-                      '30 Aug, 2023',
+                      DateFormat('dd MMM, yyyy').format(DateTime.now()),
                       style: TextStyle(color: Colors.blue[200]),
                     )
                   ],

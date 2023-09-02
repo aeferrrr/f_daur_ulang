@@ -1,10 +1,9 @@
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
+import 'package:flutter_daur_ulang/anorganik/kardus_page.dart';
 import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
-
-
 
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
@@ -14,7 +13,7 @@ class AnorganikPage extends StatefulWidget {
 }
 
 class _AnorganikPageState extends State<AnorganikPage> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
@@ -137,7 +136,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BotolPage()),
+                        MaterialPageRoute(builder: (context) => PlastikPage()),
                       );
                     },
                     child: MyButton(
@@ -151,7 +150,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PlastikPage()),
+                        MaterialPageRoute(builder: (context) => KardusPage()),
                       );
                     },
                     child: MyButton(
@@ -211,7 +210,8 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             child: MyListTile(
                               iconImagePath: 'images/degradable-plastic.png',
                               tileTitle: 'Sampah Plastic ',
-                              tileSubtitle: 'Sampah plastic kreasi \n dari tangan',
+                              tileSubtitle:
+                                  'Sampah plastic kreasi \n dari tangan',
                             ),
                           ),
                         ),
@@ -243,4 +243,3 @@ class _AnorganikPageState extends State<AnorganikPage> {
         )));
   }
 }
-
