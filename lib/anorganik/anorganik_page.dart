@@ -1,8 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/anorganik/botol_page.dart';
 import 'package:flutter_daur_ulang/anorganik/kaleng_page.dart';
 import 'package:flutter_daur_ulang/anorganik/plastik_page.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_daur_ulang/util/my_button.dart';
+import 'package:flutter_daur_ulang/util/my_list_tile.dart';
+import 'package:flutter/material.dart';
 
 class AnorganikPage extends StatefulWidget {
   const AnorganikPage({super.key});
@@ -12,24 +14,83 @@ class AnorganikPage extends StatefulWidget {
 }
 
 class _AnorganikPageState extends State<AnorganikPage> {
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[800],
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-      ),
-      body: SafeArea(
-        child: Column(
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+        ),
+        backgroundColor: Colors.grey[100],
+        body: SafeArea(
+            child: Column(
           children: [
-            //
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            // appbar
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Sampah',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Organik',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      ],
+                    ),
+                    // plus button
+                    IconButton(
+                      icon: Icon(Icons.arrow_back), // Use the arrow back icon
+                      onPressed: () {
+                        Navigator.pop(context); // Navigate back
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 15),
+
+            // cards
+            Container(
+              width: 350,
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Colors.blue[800],
+                borderRadius: BorderRadius.circular(16),
+              ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Text(
+                    'Sampah Anorganik',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    'Sampah anorganik merupakan sampah yang sifatnya lebih sulit diurai. ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      // fontSize: 28,
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -110,60 +171,145 @@ class _AnorganikPageState extends State<AnorganikPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      // card number
                       Text(
-                        'Sampah apa yang ingin anda ubah?',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        'Seperti : botol,plastic dan kardus.',
+                        style: TextStyle(color: Colors.white),
                       ),
+                      // card exprit
                       Icon(
                         Icons.recycling,
                         color: Colors.white,
-                      ),
+                      )
                     ],
+                  )
+                ],
+              ),
+            ),
+
+            SizedBox(height: 25),
+
+            // 3 buttons
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // Button 1
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BotolPage()),
+                      );
+                    },
+                    child: MyButton(
+                      iconImagePath: 'assets/bottle.png',
+                      buttonText: 'Sampah Botol',
+                    ),
+                  ),
+
+                  // Button 2
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BotolPage()),
+                      );
+                    },
+                    child: MyButton(
+                      iconImagePath: 'assets/recycled-plastic.png',
+                      buttonText: 'Sampah Plastic',
+                    ),
+                  ),
+
+                  // Button 3
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => PlastikPage()),
+                      );
+                    },
+                    child: MyButton(
+                      iconImagePath: 'assets/box.png',
+                      buttonText: 'Sampah Kardus',
+                    ),
                   ),
                 ],
               ),
             ),
 
             SizedBox(
-              height: 10,
+              height: 20,
             ),
 
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 255, 255, 255),
-                    const Color.fromARGB(255, 254, 246, 255)
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
                 ),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              margin: const EdgeInsets.symmetric(horizontal: 45),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Flexible(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: ListView(
                       children: [
-                        Text(
-                          'INSA',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        Container(
+                          width: double.infinity,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.blue[200],
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: MyListTile(
+                              iconImagePath: 'images/trash-bin.png',
+                              tileTitle: 'Sampah Botol:',
+                              tileSubtitle:
+                                  'sampah botol bisa dijadikan \nmedia tanam.',
+                            ),
+                          ),
                         ),
-                        Text(
-                          'Menyampaikan Sebuah informasi untuk daur ulang sampah',
-                          style: TextStyle(fontSize: 10, color: Colors.grey),
-                        )
+                        SizedBox(height: 10),
+                        Container(
+                          width: double.infinity,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.green[200],
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: MyListTile(
+                              iconImagePath: 'images/degradable-plastic.png',
+                              tileTitle: 'Sampah Plastic ',
+                              tileSubtitle: 'Sampah plastic kreasi \n dari tangan',
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Container(
+                          width: double.infinity,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.purple[200],
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: MyListTile(
+                              iconImagePath: 'images/recycle-packaging.png',
+                              tileTitle: 'Sampah Kardus',
+                              tileSubtitle: 'Sampah kardus bisa daur ulang',
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -386,15 +532,12 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         ),
                       ),
                     ],
-                  ),
+
                 ),
               ),
-            ),
-
-            // EXIT
+            )
           ],
-        ),
-      ),
-    );
+        )));
   }
 }
+

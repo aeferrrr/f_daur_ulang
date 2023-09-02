@@ -2,8 +2,8 @@ import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_daur_ulang/organik/daun_page.dart';
-import 'package:flutter_daur_ulang/organik/buah_page.dart';
-import 'package:flutter_daur_ulang/organik/sayur_page.dart';
+import 'package:flutter_daur_ulang/organik/telur_page.dart';
+import 'package:flutter_daur_ulang/organik/kelapa_page.dart';
 
 class OrganikPage extends StatefulWidget {
   const OrganikPage({super.key});
@@ -64,7 +64,7 @@ class _organikState extends State<OrganikPage> {
 
             // cards
             Container(
-              width: 390,
+              width: 350,
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.blue[800],
@@ -95,7 +95,7 @@ class _organikState extends State<OrganikPage> {
                     children: [
                       // card number
                       Text(
-                        'Seperti : sisa daun, buah, sayur dll.',
+                        'Seperti : sisa daun, kulit telur, batok kelapa dll.',
                         style: TextStyle(color: Colors.white),
                       ),
                       // card exprit
@@ -136,12 +136,12 @@ class _organikState extends State<OrganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BuahPage()),
+                        MaterialPageRoute(builder: (context) => TelurPage()),
                       );
                     },
                     child: MyButton(
                       iconImagePath: 'assets/compostable.png',
-                      buttonText: 'Sampah Buah',
+                      buttonText: 'Sampah Kulit Telur',
                     ),
                   ),
 
@@ -150,12 +150,12 @@ class _organikState extends State<OrganikPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SayurPage()),
+                        MaterialPageRoute(builder: (context) => KelapaPage()),
                       );
                     },
                     child: MyButton(
                       iconImagePath: 'assets/organiccc.png',
-                      buttonText: 'Sampah Sayur',
+                      buttonText: 'Sampah Batok Kelapa',
                     ),
                   ),
                 ],
@@ -180,9 +180,9 @@ class _organikState extends State<OrganikPage> {
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: Colors.blue[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -199,9 +199,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: Colors.green[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -209,7 +209,7 @@ class _organikState extends State<OrganikPage> {
                             padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Buah',
+                              tileTitle: 'Sampah Kulit Telur',
                               tileSubtitle: 'Sampah dan Daun',
                             ),
                           ),
@@ -217,9 +217,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 115,
+                          height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.purple,
+                            color: Colors.purple[200],
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -227,7 +227,7 @@ class _organikState extends State<OrganikPage> {
                             padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Sayur',
+                              tileTitle: 'Sampah Batok Kelapa',
                               tileSubtitle: 'Sampah sayur digunakan',
                             ),
                           ),

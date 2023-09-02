@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class DaunPage extends StatefulWidget {
-  const DaunPage({super.key});
+
+class KelapaPage extends StatefulWidget {
+  const KelapaPage({super.key});
 
   @override
-  State<DaunPage> createState() => _DaunPageState();
+  State<KelapaPage> createState() => _KelapaPageState();
 }
 
-class _DaunPageState extends State<DaunPage> {
+class _KelapaPageState extends State<KelapaPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -20,12 +21,12 @@ class _DaunPageState extends State<DaunPage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-         body: DaunContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class DaunContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -43,7 +44,7 @@ class DaunContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Daun Menjadi Pupuk Kompos!',
+                        'Sampah Tempurung Kelapa Menjadi Sendok!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -51,7 +52,7 @@ class DaunContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif Membuat Pupuk Kompos dari Sampah Dedaunan',
+                        'Ide kreatif Membuat Sendok dari Tempurung Kelapa',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -119,7 +120,7 @@ class DaunContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Sering kita lihat banyak sampah di sekeliling kita. Daripada dibiarkan, maka lebih baik jika mengolahnya jadi sesuatu yang bermanfaat, kan. Salah satunya dengan membuat kompos ini...',
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu....',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -127,7 +128,7 @@ class DaunContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Sering kita lihat banyak sampah di sekeliling kita. Daripada dibiarkan, maka lebih baik jika mengolahnya jadi sesuatu yang bermanfaat, kan. Salah satunya dengan membuat kompos ini. \n\nMeskipun hanya dari bahan sederhana, namun pupuk kompos ini banyak khasiatnya lho bagi tanaman. Wah, pasti jadi semakin penasaran. Kalau begitu, langsung saja simak ulasan mengenai cara pembuatannya berikut ini. \n\n Bahan yang diperlukan : \n 1. Sampah daun (Basah / Kering / Hijau) \n 2. Air 1 Gembor \n 3. EM4 (1 tutup botol) \n 4. Gula  2 sendok makan  \n\n Alat yang digunakan : \n 1. Terpal untuk Alas pencacahan daun-daun \n 2. Caluk/ Golok/ Celurit \n 3. Kayu balok \n 4. Kursi kecil \n 5. Gembor \n 6. Karung \n 7. Tali Rafia \n 8. Jarum jahit besar \n\n Proses yang dilakukan : \n 1. Sediakan sampah-sampah daun yang kering atau basah, hijau atau kuning, yang penting sampah organik. \n 2. Cacah sampah daun tersebut menjadi ukuran sekitar 2 cm agar mempercepat proses fermentasi \n 3. Setelah semua proses pencacahan selesai, siap kan air bersih, dan tuangkan dalam gembor \n 4. Masukkan gula 2 sendok makan kedalam air dan diaduk sampai rata \n 5. Tuangkan satu tutup botol EM4 kedalam air yang bercampur gula tadi dan diaduk sampai rata \n 6. Diamkan selama setengah jam agar bakteri dalam EM4 menjadi hidup. \n 7. Siram Air EM4 ke sampah-sampah daun sampai merata \n 8. Masukkan sampah daun ke dalam karung \n 9. Simpan di tempat yang tidak terkena hujan dan sinar matahari selama 3 bulan agar proses fermentasi berjalan sempurna \n 10. Agar lebih sempurna, tutuplah sampah dalam karung dengan terpal atau plastik.',
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu. \n\nSekarang sendok yang terbuat dari tanah liat atau kayu sudah susah sekali ditemui. Namun kita bisa lho membuatnya sendiri. Buatnya dari Batok kelapa. \n\nBaiklah, ingin tahu cara pembuatannya bagaimana? Yuk simak dibawah proses pembuatannya. Alat dan Bahan dalam Membuat Sendok dari Bongkahan Kelapa. \n\nBerikut adalah alat dan bahannya: \n\n1. Batok kelapa kecil \n2. Stik bentuknya seperti diatas. \n3. Lem kayu \n4. Spidol \n5. Penggaris \n6. Gergaji kecil \n7. Vernis \n\nLangkah-langkah dalam Membuat Sendok dari Tempurung Kelapa: \n\n1. Pemotongan Batok Kelapa: \nPotong batok kelapa menjadi bentuk sendok makan dengan menggunakan gergaji kayu. Buat bentuk yang mirip dengan sendok makan, dengan bagian yang melengkung sebagai wadahnya dan pegangan yang lebih panjang. \n\n2. Kasarkan Permukaan: \nKasarkan permukaan batok kelapa yang telah dipotong dengan kertas pasir untuk menghaluskan tepinya. Anda bisa menghaluskan baik bagian wadah maupun pegangan sendok. \n\n3.Cat (Opsional): \nJika Anda ingin memberi warna pada sendok makan, Anda bisa menggunakan cat dan kuas untuk melukisnya sesuai selera Anda. Biarkan cat mengering dengan baik sebelum digunakan. \n\n4. Pemakaian: \nSendok makan dari batok kelapa siap digunakan untuk makanan dan minuman. Pastikan sendok telah dibersihkan dengan baik sebelum digunakan. \n\nSelamat mencoba membuat sendok makan ramah lingkungan dari batok kelapa! Ini adalah alternatif yang baik untuk mengurangi penggunaan plastik dan bahan-bahan sekali pakai.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -183,7 +184,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'v-tyyxF46cE',
+      initialVideoId: 'TL8oTqUzXdA',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

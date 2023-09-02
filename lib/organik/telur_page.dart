@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class DaunPage extends StatefulWidget {
-  const DaunPage({super.key});
+class TelurPage extends StatefulWidget {
+  const TelurPage({super.key});
 
   @override
-  State<DaunPage> createState() => _DaunPageState();
+  State<TelurPage> createState() => _TelurPageState();
 }
 
-class _DaunPageState extends State<DaunPage> {
+class _TelurPageState extends State<TelurPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,12 +20,12 @@ class _DaunPageState extends State<DaunPage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-         body: DaunContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class DaunContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -43,7 +43,7 @@ class DaunContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Daun Menjadi Pupuk Kompos!',
+                        'Sampah Kulit Telur Menjadi Kolase Ikan!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -51,7 +51,7 @@ class DaunContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif Membuat Pupuk Kompos dari Sampah Dedaunan',
+                        'Ide kreatif Membuat Kolase Ikan dari Kulit Telur',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -119,7 +119,7 @@ class DaunContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Sering kita lihat banyak sampah di sekeliling kita. Daripada dibiarkan, maka lebih baik jika mengolahnya jadi sesuatu yang bermanfaat, kan. Salah satunya dengan membuat kompos ini...',
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah...',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -127,7 +127,7 @@ class DaunContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Sering kita lihat banyak sampah di sekeliling kita. Daripada dibiarkan, maka lebih baik jika mengolahnya jadi sesuatu yang bermanfaat, kan. Salah satunya dengan membuat kompos ini. \n\nMeskipun hanya dari bahan sederhana, namun pupuk kompos ini banyak khasiatnya lho bagi tanaman. Wah, pasti jadi semakin penasaran. Kalau begitu, langsung saja simak ulasan mengenai cara pembuatannya berikut ini. \n\n Bahan yang diperlukan : \n 1. Sampah daun (Basah / Kering / Hijau) \n 2. Air 1 Gembor \n 3. EM4 (1 tutup botol) \n 4. Gula  2 sendok makan  \n\n Alat yang digunakan : \n 1. Terpal untuk Alas pencacahan daun-daun \n 2. Caluk/ Golok/ Celurit \n 3. Kayu balok \n 4. Kursi kecil \n 5. Gembor \n 6. Karung \n 7. Tali Rafia \n 8. Jarum jahit besar \n\n Proses yang dilakukan : \n 1. Sediakan sampah-sampah daun yang kering atau basah, hijau atau kuning, yang penting sampah organik. \n 2. Cacah sampah daun tersebut menjadi ukuran sekitar 2 cm agar mempercepat proses fermentasi \n 3. Setelah semua proses pencacahan selesai, siap kan air bersih, dan tuangkan dalam gembor \n 4. Masukkan gula 2 sendok makan kedalam air dan diaduk sampai rata \n 5. Tuangkan satu tutup botol EM4 kedalam air yang bercampur gula tadi dan diaduk sampai rata \n 6. Diamkan selama setengah jam agar bakteri dalam EM4 menjadi hidup. \n 7. Siram Air EM4 ke sampah-sampah daun sampai merata \n 8. Masukkan sampah daun ke dalam karung \n 9. Simpan di tempat yang tidak terkena hujan dan sinar matahari selama 3 bulan agar proses fermentasi berjalan sempurna \n 10. Agar lebih sempurna, tutuplah sampah dalam karung dengan terpal atau plastik.',
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah. \n\nDaripada mereka bermain gadget, mengajak mereka memanfaatkan bahan-bahan rumah yang tidak terpakai bisa menjadi hal yang mengasyiknya.Kali ini kita akan mengajak bunda dan anak untuk membuat kolase dari kulit telur, simak caranya ya : \n\nBahan-bahan yang perlu disiapkan : \n\n• 4 kulit telur \n• Lem \n• Cat air \n• Cutton but \n• Kertas bergambar bebas  \n\nCara Membuatnya : \n\n1. Cuci kulit telur dengan sabun supaya tidak berbau amis, kemudian bilas menggunakan air bersih. Jemur kulit telur di bawah sinar matahari selama kurang lebih 1 jam sampai benar-benar kering.\n\n2. Kupas kulit air, agar mudah saat memberi lem nantinya.\n\n3. Setelah kita mempersiapkan kulit telur. Kini saatnya untuk mulai membuat kolase.\n\n4.Balur lem menggunakan cutton bud di area kertas yang bergambar. Misal, bunda telah menyiapkan kertas dengan gambar rumah. Maka balur lem pada gambar rumah tersebut.\n\n5. Bunda mungkin bisa mengarahkan anak untuk membalurkan lem sedikit demi sedikit diarea bergambar. Diselingi dengan menempelkan kulit telur yang sudah dipotong kecil-kecil di atas lem, supaya lem di kertas tidak kering terlebih dahulu.\n\n6. Jika seluruh gambar telah tertutupi dengan kulit telur, maka kolase telah terbentuk. Namun, agar lebih cantik Bunda dan anak bisa memberinya cat air sesuai dengan selera warnanya.\n\n7. Tunggu sampai cat air kering dan selesai.\n\nGimana Bund, mudah bukan? Ajak selalu anak berkreasi dengan memanfaatkan bahan-bahan rumah tangga yang tidak terpakai ya Bund. Di samping melatih motorik anak, kita juga bisa mengurangi penumpukan sampah.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -183,7 +183,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'v-tyyxF46cE',
+      initialVideoId: 'OPRUUFGZvFU',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
