@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'UC9Dz_razZctEJghsLzs_46w');
+        .fetchChannel(channelId: 'UCtz6wyG_RK14vsDSXvxcZUw');
     setState(() {
       _channel = channel;
     });
