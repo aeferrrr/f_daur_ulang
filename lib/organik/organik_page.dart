@@ -237,7 +237,7 @@ class _organikState extends State<OrganikPage> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         )));
   }
