@@ -41,7 +41,7 @@ class MyButton extends StatelessWidget {
           style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.bold,
-            color: Colors.grey[700],
+            color: Colors.black,
           ),
         )
       ],

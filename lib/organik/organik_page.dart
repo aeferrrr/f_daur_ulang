@@ -13,10 +13,18 @@ class OrganikPage extends StatefulWidget {
 }
 
 class _organikState extends State<OrganikPage> {
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
@@ -39,19 +47,22 @@ class _organikState extends State<OrganikPage> {
                         Text(
                           'Sampah',
                           style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                          ),
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
                         ),
                         Text(
                           'Organik',
-                          style: TextStyle(fontSize: 25),
+                          style: TextStyle(fontSize: 25, color: Colors.black),
                         ),
                       ],
                     ),
                     // plus button
                     IconButton(
-                      icon: Icon(Icons.arrow_back), // Use the arrow back icon
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.black,
+                      ), // Use the arrow back icon
                       onPressed: () {
                         Navigator.pop(context); // Navigate back
                       },
@@ -77,14 +88,14 @@ class _organikState extends State<OrganikPage> {
                     'Sampah Organik',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 5,
                   ),
                   Text(
-                    'adalah sampah alami yang mudah membusuk & mudah terurai secara alami. ',
+                    'adalah jenis sampah alami yang mudah membusuk & mudah terurai secara alami oleh mikroorganisme menjadi kompos.sampah organik basah (sisa buah-buahan dan sayur-sayuran), dan yang kedua sampah organik kering (daun, kertas, kayu, dsb) ',
                     style: TextStyle(
                       color: Colors.white,
                       // fontSize: 28,
@@ -126,8 +137,8 @@ class _organikState extends State<OrganikPage> {
                       );
                     },
                     child: MyButton(
-                      iconImagePath: 'assets/recycling.png',
-                      buttonText: 'Sampah Daun',
+                      iconImagePath: 'assets/dry.png',
+                      buttonText: 'Daun Kering',
                     ),
                   ),
 
@@ -140,8 +151,8 @@ class _organikState extends State<OrganikPage> {
                       );
                     },
                     child: MyButton(
-                      iconImagePath: 'assets/compostable.png',
-                      buttonText: 'Sampah Buah',
+                      iconImagePath: 'assets/broken.png',
+                      buttonText: 'Cangkang Telur',
                     ),
                   ),
 
@@ -154,8 +165,8 @@ class _organikState extends State<OrganikPage> {
                       );
                     },
                     child: MyButton(
-                      iconImagePath: 'assets/organiccc.png',
-                      buttonText: 'Sampah Sayur',
+                      iconImagePath: 'assets/coconut.png',
+                      buttonText: 'Batok Kelapa',
                     ),
                   ),
                 ],
@@ -168,29 +179,28 @@ class _organikState extends State<OrganikPage> {
 
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: ListView(
                       children: [
                         Container(
                           width: double.infinity,
                           height: 115,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
-                            border: Border.all(color: Colors.grey),
+                            color: Color(0xFFa0e548),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
-                              iconImagePath: 'assets/recycling.png',
-                              tileTitle: 'Sampah Daun:',
+                              iconImagePath: 'assets/dry.png',
+                              tileTitle: 'Sampah Daun',
                               tileSubtitle:
                                   'sampah daun bisa dijadikan \npupuk kompos yang\nbermanfaat.',
                             ),
@@ -201,16 +211,16 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 115,
                           decoration: BoxDecoration(
-                            color: Colors.green,
-                            border: Border.all(color: Colors.grey),
+                            color: Color(0xFFf6c445),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
-                              iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Buah',
-                              tileSubtitle: 'Sampah dan Daun',
+                              iconImagePath: 'assets/broken.png',
+                              tileTitle: 'Cangkang Telur',
+                              tileSubtitle:
+                                  'pengolahan limbah\ncangkang telur menjadi\npupuk organik.',
                             ),
                           ),
                         ),
@@ -219,16 +229,16 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 115,
                           decoration: BoxDecoration(
-                            color: Colors.purple,
-                            border: Border.all(color: Colors.grey),
+                            color: Color(0xFF9AC1F0),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
-                              iconImagePath: 'assets/compostable.png',
-                              tileTitle: 'Sampah Sayur',
-                              tileSubtitle: 'Sampah sayur digunakan',
+                              iconImagePath: 'assets/coconut.png',
+                              tileTitle: 'Batok Kelapa',
+                              tileSubtitle:
+                                  'asap cair dari batok kelapa\ndapat dijadikan sebagai\npengawet alami pada ikan',
                             ),
                           ),
                         ),
