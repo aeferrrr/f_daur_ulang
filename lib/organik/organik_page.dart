@@ -60,11 +60,11 @@ class _organikState extends State<OrganikPage> {
                     // plus button
                     IconButton(
                       icon: Icon(
-                        Icons.arrow_back_ios,
+                        Icons.arrow_back_ios_new,
                         color: Colors.black,
-                      ), // Use the arrow back icon
+                      ),
                       onPressed: () {
-                        Navigator.pop(context); // Navigate back
+                        Navigator.pop(context);
                       },
                     ),
                   ],
@@ -75,7 +75,7 @@ class _organikState extends State<OrganikPage> {
 
             // cards
             Container(
-              width: 350,
+              width: 370,
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.blue[800],
@@ -152,7 +152,7 @@ class _organikState extends State<OrganikPage> {
                     },
                     child: MyButton(
                       iconImagePath: 'assets/broken.png',
-                      buttonText: 'Sampah Kulit Telur',
+                      buttonText: 'Cangkang Telur',
                     ),
                   ),
 
@@ -166,7 +166,7 @@ class _organikState extends State<OrganikPage> {
                     },
                     child: MyButton(
                       iconImagePath: 'assets/coconut.png',
-                      buttonText: 'Sampah Batok Kelapa',
+                      buttonText: 'Batok Kelapa',
                     ),
                   ),
                 ],
@@ -193,15 +193,14 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 110,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
-                            border: Border.all(color: Colors.grey),
+                            color: Colors.blue[200],
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
                               iconImagePath: 'assets/dry.png',
-                              tileTitle: 'Sampah Daun',
+                              tileTitle: 'Sampah Daun Kering',
                               tileSubtitle:
                                   'sampah daun bisa dijadikan \npupuk kompos yang\nbermanfaat.',
                             ),
@@ -212,15 +211,14 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 110,
                           decoration: BoxDecoration(
-                            color: Colors.green,
-                            border: Border.all(color: Colors.grey),
+                            color: Colors.green[200],
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
                               iconImagePath: 'assets/broken.png',
-                              tileTitle: 'Sampah Kulit Telur',
+                              tileTitle: 'Sampah Cangkang Telur',
                               tileSubtitle:
                                   'pengolahan limbah\ncangkang telur menjadi\npupuk organik.',
                             ),
@@ -232,7 +230,6 @@ class _organikState extends State<OrganikPage> {
                           height: 110,
                           decoration: BoxDecoration(
                             color: Colors.purple[200],
-                            border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
