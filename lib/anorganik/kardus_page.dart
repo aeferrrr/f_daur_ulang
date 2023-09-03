@@ -4,11 +4,11 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: PlastikPage(),
+    home: KardusPage(),
   ));
 }
 
-class PlastikPage extends StatelessWidget {
+class KardusPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,12 +19,12 @@ class PlastikPage extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
-      body: PlastikContent(),
+      body: KardusContent(),
     );
   }
 }
 
-class PlastikContent extends StatelessWidget {
+class KardusContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +42,7 @@ class PlastikContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Kardus Bekas Menjadi Kreasi!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +50,7 @@ class PlastikContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan tas dari sampah plastik',
+                        'Ide kreatif membuat kardus bekas menjadi mesin atm',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +118,7 @@ class PlastikContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana...',
+                                  'Membuat mesin ATM mainan dari kardus adalah proyek kreatif yang aman dan edukatif untuk anak-anak. Ini adalah cara yang bagus untuk mengajarkan konsep dasar perbankan dan pengelolaan uang kepada mereka.',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +126,7 @@ class PlastikContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana. Berikut cara membuatnya \n\n1. Menyiapkan Alat dan Bahan Terlebih Dahulu \n\n Hal pertama yang harus kamu lakukan adalah menyiapkan semua bahan-bahan seperti: \n\n  - Plastik bekas kemasan Rinso berukuran besar \n  - Kain lap untuk membersihkan plastik bekas kemasan.\n - Benang untuk menjahit beberapa bagian tas plastik.\n  - Gunting \n - Kain polos \n  - Furing \n  - Ritsleting (opsional) \n\n2. Membersihkan Plastik Bekas Kemasan Sebelum Dipakai \n\nJika semua alat dan bahan sudah siap, Anda bisa mulai membersihkan plastik bekas kemasan Rinso. Bersihkan seluruh bagian dalamnya dengan kain lap lalu jemur sebentar di bawah sinar matahari.\n\n3. Mulai Memotong-motong Plastik Kemasan \n\nPlastik kemasan yang sudah dijemur sampai kering bisa langsung dipotong menjadi dua bagian. Kemudian, buatlah lipatan sejauh 3 cm pada ujung atas dan ujung bawah kemasan tersebut. Guntinglah lipatan-lipatan sebesar 3 cm untuk mendapatkan helai-helai plastik kecil. Anda bisa membuat 500 lipatan dari 50 bungkus plastik kemasan Rinso. \n\n4. Menganyam Potongan-Potongan Plastik \n\nCara membuat kerajinan dari plastik deterjen selanjutnya yang patut Anda lakukan adalah menganyam potongan-potongan plastik yang sudah dipotong-potong. Anyamlah potongan tersebut hingga bentuknya menyerupai baling-baling. Ujung anyaman harus berbentuk vertikal untuk mempermudah proses penggabungannya. \n\n5.Menggabungkan Anyaman-Anyaman Plastik  \n\nAnyaman-anyaman plastik yang sudah rapi tinggal disambungkan satu sama lain. Anda tinggal menyelipkan anyaman pada bagian vertikal anyaman lainnya. Proses ini harus dilakukan terus-menerus hingga anyaman berbentuk melingkar seperti kantung.\n\n6.Membuat Tali Tas dari Sisa Lipatan \n\nJika tas plastik sudah terbentuk sempurna, maka Anda bisa melanjutkan prosesnya dengan membuat tali tas. Manfaatkan sisa lipatan plastik yang sudah dianyam untuk membuat bentuk segitiga. Kemudian, hubungkan ujung segitiga dengan segitiga lainnya agar saling mengunci dan membentuk tali panjang. \n\n7. Menjahit Tali Agar Menyatu dengan Tas Plastik Anda bebas menentukan panjang tali sesuai kebutuhan dan selera. \n\nTali plastik yang sudah jadi bisa segera dijahit pada kedua ujung tas plastik. Pastikan bahwa jahitannya benar-benar kuat supaya tali tas tidak mudah sobek.\n\n8. Melapisi Bagian Dalam Tas dengan Furing Langkah terakhir dalam cara membuat kerajinan dari plastik deterjen berbentuk tas adalah melapisi bagian dalam tas dengan furing. \n\nPenggunaan furing akan membuat tas plastik lebih kuat karena terdiri dari lapisan ganda. Usahakan untuk memilih furing yang warnanya senada dengan plastik kemasan Rinso supaya tampak lebih eye catching. Anda juga bisa menambahkan ritsleting supaya tas dapat ditutup dengan sempurna.',
+                                  'Membuat mesin ATM mainan dari kardus adalah proyek kreatif yang aman dan edukatif untuk anak-anak. Ini adalah cara yang bagus untuk mengajarkan konsep dasar perbankan dan pengelolaan uang kepada mereka. Berikut adalah panduan langkah demi langkah untuk membuat mesin ATM mainan dari kardus:\n\nBahan yang Anda butuhkan:\n1. Sebuah kotak kardus besar.\n2. Gunting.\n3. Cat atau spidol.\n4. Kertas dan stiker warna-warn.\n5. Jarum pentul.\n6. Lem (opsional).\n7. Pita pengukur (opsional).\n\nLangkah-langkah:\n1. Siapkan kotak kardus Anda:\n - Tutup kotak kardus dan pastikan itu dalam kondisi baik.\n- Potong bagian atas kotak (tutup) sehingga Anda dapat melihat ke dalam kotak dengan mudah. Ini akan menjadi layar mesin ATM.\n\n2. Desain layar:\n - Gunakan cat atau spidol untuk menggambar tampilan ATM pada bagian dalam tutup kotak. Anda dapat menggambar gambar seperti slot kartu ATM, layar sentuh, tombol, dan antarmuka pengguna lainnya. Gunakan imajinasi Anda dan tambahkan detail sesuai keinginan.\n\n3. Buat slot kartu ATM:\n - Potong lubang kecil pada salah satu sisi kotak untuk membuat slot kartu ATM. Pastikan slotnya cukup besar untuk memasukkan kartu mainan dengan mudah.\n\n4. Tambahkan tombol:\n - Gunakan potongan kertas atau stiker warna-warni untuk membuat tombol-tombol di sekitar layar ATM. Anda dapat menambahkan tombol angka, tombol penarikan, dan tombol lainnya.\n\n5. Tambahkan stiker atau gambar untuk dekorasi:\n - Hiasi kotak kardus Anda dengan stiker atau gambar yang relevan dengan mesin ATM.\n\n6. Buat rekening mainan:\n - Potong potongan kertas berbentuk kartu ATM yang dapat digunakan sebagai "kartu rekening" mainan. Anda bisa memberi warna atau menambahkan stiker pada kartu-kartu ini.\n\n7. Buat saldo mainan:\n - Tambahkan "saldo" mainan dalam bentuk uang kertas palsu atau koin mainan di dalam kotak. Ini bisa digunakan untuk bermain peran bertransaksi di mesin ATM.\n\n8. Anda bisa menambahkan pita pengukur di sekitar layar ATM untuk memberikan tampilan yang lebih realistis.\n\n9. selesai',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +182,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'uEg40bX8rzc',
+      initialVideoId: 'JYG4MS-tsck',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

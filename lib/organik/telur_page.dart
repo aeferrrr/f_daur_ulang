@@ -2,29 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: PlastikPage(),
-  ));
+class TelurPage extends StatefulWidget {
+  const TelurPage({super.key});
+
+  @override
+  State<TelurPage> createState() => _TelurPageState();
 }
 
-class PlastikPage extends StatelessWidget {
+class _TelurPageState extends State<TelurPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-      body: PlastikContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class PlastikContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +43,7 @@ class PlastikContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Sampah Kulit Telur Menjadi Kolase Ikan!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +51,7 @@ class PlastikContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan tas dari sampah plastik',
+                        'Ide kreatif Membuat Kolase Ikan dari Kulit Telur',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +119,7 @@ class PlastikContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana...',
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah...',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +127,7 @@ class PlastikContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana. Berikut cara membuatnya \n\n1. Menyiapkan Alat dan Bahan Terlebih Dahulu \n\n Hal pertama yang harus kamu lakukan adalah menyiapkan semua bahan-bahan seperti: \n\n  - Plastik bekas kemasan Rinso berukuran besar \n  - Kain lap untuk membersihkan plastik bekas kemasan.\n - Benang untuk menjahit beberapa bagian tas plastik.\n  - Gunting \n - Kain polos \n  - Furing \n  - Ritsleting (opsional) \n\n2. Membersihkan Plastik Bekas Kemasan Sebelum Dipakai \n\nJika semua alat dan bahan sudah siap, Anda bisa mulai membersihkan plastik bekas kemasan Rinso. Bersihkan seluruh bagian dalamnya dengan kain lap lalu jemur sebentar di bawah sinar matahari.\n\n3. Mulai Memotong-motong Plastik Kemasan \n\nPlastik kemasan yang sudah dijemur sampai kering bisa langsung dipotong menjadi dua bagian. Kemudian, buatlah lipatan sejauh 3 cm pada ujung atas dan ujung bawah kemasan tersebut. Guntinglah lipatan-lipatan sebesar 3 cm untuk mendapatkan helai-helai plastik kecil. Anda bisa membuat 500 lipatan dari 50 bungkus plastik kemasan Rinso. \n\n4. Menganyam Potongan-Potongan Plastik \n\nCara membuat kerajinan dari plastik deterjen selanjutnya yang patut Anda lakukan adalah menganyam potongan-potongan plastik yang sudah dipotong-potong. Anyamlah potongan tersebut hingga bentuknya menyerupai baling-baling. Ujung anyaman harus berbentuk vertikal untuk mempermudah proses penggabungannya. \n\n5.Menggabungkan Anyaman-Anyaman Plastik  \n\nAnyaman-anyaman plastik yang sudah rapi tinggal disambungkan satu sama lain. Anda tinggal menyelipkan anyaman pada bagian vertikal anyaman lainnya. Proses ini harus dilakukan terus-menerus hingga anyaman berbentuk melingkar seperti kantung.\n\n6.Membuat Tali Tas dari Sisa Lipatan \n\nJika tas plastik sudah terbentuk sempurna, maka Anda bisa melanjutkan prosesnya dengan membuat tali tas. Manfaatkan sisa lipatan plastik yang sudah dianyam untuk membuat bentuk segitiga. Kemudian, hubungkan ujung segitiga dengan segitiga lainnya agar saling mengunci dan membentuk tali panjang. \n\n7. Menjahit Tali Agar Menyatu dengan Tas Plastik Anda bebas menentukan panjang tali sesuai kebutuhan dan selera. \n\nTali plastik yang sudah jadi bisa segera dijahit pada kedua ujung tas plastik. Pastikan bahwa jahitannya benar-benar kuat supaya tali tas tidak mudah sobek.\n\n8. Melapisi Bagian Dalam Tas dengan Furing Langkah terakhir dalam cara membuat kerajinan dari plastik deterjen berbentuk tas adalah melapisi bagian dalam tas dengan furing. \n\nPenggunaan furing akan membuat tas plastik lebih kuat karena terdiri dari lapisan ganda. Usahakan untuk memilih furing yang warnanya senada dengan plastik kemasan Rinso supaya tampak lebih eye catching. Anda juga bisa menambahkan ritsleting supaya tas dapat ditutup dengan sempurna.',
+                                  'Yuk Bun, Ajak Anak Membuat Kolase dari Kulit Telur! Kulit telur ternyata bisa lho Bund dimanfaatkan untuk berkreasi bersama anak-anak di rumah. \n\nDaripada mereka bermain gadget, mengajak mereka memanfaatkan bahan-bahan rumah yang tidak terpakai bisa menjadi hal yang mengasyiknya.Kali ini kita akan mengajak bunda dan anak untuk membuat kolase dari kulit telur, simak caranya ya : \n\nBahan-bahan yang perlu disiapkan : \n\n• 4 kulit telur \n• Lem \n• Cat air \n• Cutton but \n• Kertas bergambar bebas  \n\nCara Membuatnya : \n\n1. Cuci kulit telur dengan sabun supaya tidak berbau amis, kemudian bilas menggunakan air bersih. Jemur kulit telur di bawah sinar matahari selama kurang lebih 1 jam sampai benar-benar kering.\n\n2. Kupas kulit air, agar mudah saat memberi lem nantinya.\n\n3. Setelah kita mempersiapkan kulit telur. Kini saatnya untuk mulai membuat kolase.\n\n4.Balur lem menggunakan cutton bud di area kertas yang bergambar. Misal, bunda telah menyiapkan kertas dengan gambar rumah. Maka balur lem pada gambar rumah tersebut.\n\n5. Bunda mungkin bisa mengarahkan anak untuk membalurkan lem sedikit demi sedikit diarea bergambar. Diselingi dengan menempelkan kulit telur yang sudah dipotong kecil-kecil di atas lem, supaya lem di kertas tidak kering terlebih dahulu.\n\n6. Jika seluruh gambar telah tertutupi dengan kulit telur, maka kolase telah terbentuk. Namun, agar lebih cantik Bunda dan anak bisa memberinya cat air sesuai dengan selera warnanya.\n\n7. Tunggu sampai cat air kering dan selesai.\n\nGimana Bund, mudah bukan? Ajak selalu anak berkreasi dengan memanfaatkan bahan-bahan rumah tangga yang tidak terpakai ya Bund. Di samping melatih motorik anak, kita juga bisa mengurangi penumpukan sampah.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +183,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'uEg40bX8rzc',
+      initialVideoId: 'OPRUUFGZvFU',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

@@ -2,29 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:expandable/expandable.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: PlastikPage(),
-  ));
+
+class KelapaPage extends StatefulWidget {
+  const KelapaPage({super.key});
+
+  @override
+  State<KelapaPage> createState() => _KelapaPageState();
 }
 
-class PlastikPage extends StatelessWidget {
+class _KelapaPageState extends State<KelapaPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-      body: PlastikContent(),
+         body: TelurContent(),
     );
   }
 }
 
-class PlastikContent extends StatelessWidget {
+class TelurContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +44,7 @@ class PlastikContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Sampah Tempurung Kelapa Menjadi Sendok!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +52,7 @@ class PlastikContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan tas dari sampah plastik',
+                        'Ide kreatif Membuat Sendok dari Tempurung Kelapa',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
@@ -118,7 +120,7 @@ class PlastikContent extends StatelessWidget {
                               SizedBox(height: 10),
                               Expandable(
                                 collapsed: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana...',
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu....',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15),
                                   maxLines: 5,
@@ -126,7 +128,7 @@ class PlastikContent extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 expanded: Text(
-                                  'Ternyata, cara membuat kerajinan dari plastik deterjen tidak sulit dan hanya membutuhkan bahan-bahan sederhana. Berikut cara membuatnya \n\n1. Menyiapkan Alat dan Bahan Terlebih Dahulu \n\n Hal pertama yang harus kamu lakukan adalah menyiapkan semua bahan-bahan seperti: \n\n  - Plastik bekas kemasan Rinso berukuran besar \n  - Kain lap untuk membersihkan plastik bekas kemasan.\n - Benang untuk menjahit beberapa bagian tas plastik.\n  - Gunting \n - Kain polos \n  - Furing \n  - Ritsleting (opsional) \n\n2. Membersihkan Plastik Bekas Kemasan Sebelum Dipakai \n\nJika semua alat dan bahan sudah siap, Anda bisa mulai membersihkan plastik bekas kemasan Rinso. Bersihkan seluruh bagian dalamnya dengan kain lap lalu jemur sebentar di bawah sinar matahari.\n\n3. Mulai Memotong-motong Plastik Kemasan \n\nPlastik kemasan yang sudah dijemur sampai kering bisa langsung dipotong menjadi dua bagian. Kemudian, buatlah lipatan sejauh 3 cm pada ujung atas dan ujung bawah kemasan tersebut. Guntinglah lipatan-lipatan sebesar 3 cm untuk mendapatkan helai-helai plastik kecil. Anda bisa membuat 500 lipatan dari 50 bungkus plastik kemasan Rinso. \n\n4. Menganyam Potongan-Potongan Plastik \n\nCara membuat kerajinan dari plastik deterjen selanjutnya yang patut Anda lakukan adalah menganyam potongan-potongan plastik yang sudah dipotong-potong. Anyamlah potongan tersebut hingga bentuknya menyerupai baling-baling. Ujung anyaman harus berbentuk vertikal untuk mempermudah proses penggabungannya. \n\n5.Menggabungkan Anyaman-Anyaman Plastik  \n\nAnyaman-anyaman plastik yang sudah rapi tinggal disambungkan satu sama lain. Anda tinggal menyelipkan anyaman pada bagian vertikal anyaman lainnya. Proses ini harus dilakukan terus-menerus hingga anyaman berbentuk melingkar seperti kantung.\n\n6.Membuat Tali Tas dari Sisa Lipatan \n\nJika tas plastik sudah terbentuk sempurna, maka Anda bisa melanjutkan prosesnya dengan membuat tali tas. Manfaatkan sisa lipatan plastik yang sudah dianyam untuk membuat bentuk segitiga. Kemudian, hubungkan ujung segitiga dengan segitiga lainnya agar saling mengunci dan membentuk tali panjang. \n\n7. Menjahit Tali Agar Menyatu dengan Tas Plastik Anda bebas menentukan panjang tali sesuai kebutuhan dan selera. \n\nTali plastik yang sudah jadi bisa segera dijahit pada kedua ujung tas plastik. Pastikan bahwa jahitannya benar-benar kuat supaya tali tas tidak mudah sobek.\n\n8. Melapisi Bagian Dalam Tas dengan Furing Langkah terakhir dalam cara membuat kerajinan dari plastik deterjen berbentuk tas adalah melapisi bagian dalam tas dengan furing. \n\nPenggunaan furing akan membuat tas plastik lebih kuat karena terdiri dari lapisan ganda. Usahakan untuk memilih furing yang warnanya senada dengan plastik kemasan Rinso supaya tampak lebih eye catching. Anda juga bisa menambahkan ritsleting supaya tas dapat ditutup dengan sempurna.',
+                                  'Sendok adalah alat yang digunakan manusia untuk menikmati hidanngan di depannya. Sendok biasanya terbuat dari besi atau alumunium. Nah akan tetapi dahulu ia masih tebuat dari tanah liat atau kayu. \n\nSekarang sendok yang terbuat dari tanah liat atau kayu sudah susah sekali ditemui. Namun kita bisa lho membuatnya sendiri. Buatnya dari Batok kelapa. \n\nBaiklah, ingin tahu cara pembuatannya bagaimana? Yuk simak dibawah proses pembuatannya. Alat dan Bahan dalam Membuat Sendok dari Bongkahan Kelapa. \n\nBerikut adalah alat dan bahannya: \n\n1. Batok kelapa kecil \n2. Stik bentuknya seperti diatas. \n3. Lem kayu \n4. Spidol \n5. Penggaris \n6. Gergaji kecil \n7. Vernis \n\nLangkah-langkah dalam Membuat Sendok dari Tempurung Kelapa: \n\n1. Pemotongan Batok Kelapa: \nPotong batok kelapa menjadi bentuk sendok makan dengan menggunakan gergaji kayu. Buat bentuk yang mirip dengan sendok makan, dengan bagian yang melengkung sebagai wadahnya dan pegangan yang lebih panjang. \n\n2. Kasarkan Permukaan: \nKasarkan permukaan batok kelapa yang telah dipotong dengan kertas pasir untuk menghaluskan tepinya. Anda bisa menghaluskan baik bagian wadah maupun pegangan sendok. \n\n3.Cat (Opsional): \nJika Anda ingin memberi warna pada sendok makan, Anda bisa menggunakan cat dan kuas untuk melukisnya sesuai selera Anda. Biarkan cat mengering dengan baik sebelum digunakan. \n\n4. Pemakaian: \nSendok makan dari batok kelapa siap digunakan untuk makanan dan minuman. Pastikan sendok telah dibersihkan dengan baik sebelum digunakan. \n\nSelamat mencoba membuat sendok makan ramah lingkungan dari batok kelapa! Ini adalah alternatif yang baik untuk mengurangi penggunaan plastik dan bahan-bahan sekali pakai.' ,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
@@ -182,7 +184,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'uEg40bX8rzc',
+      initialVideoId: 'TL8oTqUzXdA',
       flags: YoutubePlayerFlags(
         autoPlay: false,
         mute: false,

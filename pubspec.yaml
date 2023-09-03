@@ -41,7 +41,7 @@ dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/recycle.jpg"
+  image_path: "assets/insalogo.png"
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -58,11 +58,15 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/card1.png
     - assets/broken.png
-    - assets/coconut.png
-    - assets/recycling.png
     - assets/dry.png
+    - assets/coconut.png
+    - assets/bottle.png
+    - assets/recycled-plastic.png
+    - assets/box.png
+    - images/degradable-plastic.png
+    - images/recycle-packaging.png
+    - images/trash-bin.png
     - images/insa.png
     - images/youtube.png
     - images/instagram.png
