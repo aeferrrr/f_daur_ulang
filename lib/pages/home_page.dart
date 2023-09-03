@@ -157,29 +157,43 @@ class HeaderSection extends StatelessWidget {
   }
 }
 
-class EmoticonSection extends StatelessWidget {
+class EmoticonSection extends StatefulWidget {
+  @override
+  _EmoticonSectionState createState() => _EmoticonSectionState();
+}
+
+class _EmoticonSectionState extends State<EmoticonSection> {
+  List<String> emoticons = ['😀', '😁', '😒', '🙁'];
+  int selectedEmoticonIndex = -1;
+
+  void onTapEmoticon(int index) {
+    setState(() {
+      if (selectedEmoticonIndex == index) {
+        // Deselect emoticon if already selected
+        selectedEmoticonIndex = -1;
+      } else {
+        // Select a different emoticon
+        selectedEmoticonIndex = index;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Flexible(
-          flex: 1,
-          child: EmoticonItem(emoticon: '😀', label: 'Smile'),
-        ),
-        Flexible(
-          flex: 1,
-          child: EmoticonItem(emoticon: '😁', label: 'Happy'),
-        ),
-        Flexible(
-          flex: 1,
-          child: EmoticonItem(emoticon: '😒', label: 'Bad'),
-        ),
-        Flexible(
-          flex: 1,
-          child: EmoticonItem(emoticon: '🙁', label: 'Sad'),
-        ),
-      ],
+      children: emoticons.asMap().entries.map((entry) {
+        final int index = entry.key;
+        final String emoticon = entry.value;
+        final bool isSelected = index == selectedEmoticonIndex;
+
+        return EmoticonItem(
+          emoticon: emoticon,
+          label: isSelected ? '✔️' : '❌',
+          isSelected: isSelected,
+          onTap: () => onTapEmoticon(index),
+        );
+      }).toList(),
     );
   }
 }
@@ -187,17 +201,60 @@ class EmoticonSection extends StatelessWidget {
 class EmoticonItem extends StatelessWidget {
   final String emoticon;
   final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
 
-  const EmoticonItem({required this.emoticon, required this.label});
+  const EmoticonItem({
+    required this.emoticon,
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
+    Color? bgColor = isSelected ? Colors.red : Colors.blue[600];
+
     return Column(
       children: [
-        EmoticonFace(emoticonFace: emoticon),
+        GestureDetector(
+          onTap: onTap,
+          child: EmoticonFace(
+            emoticonFace: emoticon,
+            isSelected: isSelected,
+          ),
+        ),
         SizedBox(height: 8),
         Text(label, style: TextStyle(color: Colors.white)),
       ],
+    );
+  }
+}
+
+class EmoticonFace extends StatelessWidget {
+  final String emoticonFace;
+  final bool isSelected;
+
+  const EmoticonFace({
+    Key? key,
+    required this.emoticonFace,
+    required this.isSelected,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Color? bgColor = isSelected ? Colors.blue[600] : Colors.blue[600];
+
+    return Container(
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      padding: EdgeInsets.all(12),
+      child: Text(
+        emoticonFace,
+        style: TextStyle(fontSize: 28),
+      ),
     );
   }
 }
@@ -213,7 +270,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
     double defaultPaddingBottom = MediaQuery.of(context).padding.bottom;
 
     return Container(
-      padding: EdgeInsets.fromLTRB(25, 25, 25, defaultPaddingBottom + 240),
+      padding: EdgeInsets.fromLTRB(25, 25, 25, 0),
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.vertical(
