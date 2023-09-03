@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
 
 class HeaderSection extends StatelessWidget {
   TextEditingController _searchController = TextEditingController();
-  
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -334,7 +334,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Ada 2 contoh sampah organik',
+                            'Limbah, Karya, Gemilang',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey,
@@ -388,7 +388,7 @@ class _RecyclingSectionState extends State<RecyclingSection> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Ada 2 contoh sampah Anorganik',
+                            'Kreativitas Ramah Lingkungan',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey,
