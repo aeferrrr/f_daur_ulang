@@ -49,6 +49,7 @@ class HomePage extends StatelessWidget {
 
 class HeaderSection extends StatelessWidget {
   TextEditingController _searchController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -118,7 +119,7 @@ class HeaderSection extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Search',
                     hintStyle: TextStyle(
-                      color: const Color.fromARGB(255, 119, 61, 61),
+                      color: Colors.white,
                     ),
                     contentPadding: EdgeInsets.only(
                         right: 40), // Adjust this value as needed

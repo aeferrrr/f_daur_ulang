@@ -41,9 +41,6 @@ class MyListTile extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
                     Text(
                       tileSubtitle,
                       style: TextStyle(

@@ -44,14 +44,15 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           ),
                         ),
                         Text(
-                          'Organik',
+                          'Anorganik',
                           style: TextStyle(fontSize: 25),
                         ),
                       ],
                     ),
                     // plus button
                     IconButton(
-                      icon: Icon(Icons.arrow_back), // Use the arrow back icon
+                      icon: Icon(
+                          Icons.arrow_back_ios_new), // Use the arrow back icon
                       onPressed: () {
                         Navigator.pop(context); // Navigate back
                       },
@@ -183,14 +184,13 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.blue[200],
-                            border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: MyListTile(
                               iconImagePath: 'images/trash-bin.png',
-                              tileTitle: 'Sampah Botol:',
+                              tileTitle: 'Sampah Botol',
                               tileSubtitle:
                                   'sampah botol bisa dijadikan \nmedia tanam.',
                             ),
@@ -202,7 +202,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.green[200],
-                            border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
@@ -211,7 +210,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                               iconImagePath: 'images/degradable-plastic.png',
                               tileTitle: 'Sampah Plastic ',
                               tileSubtitle:
-                                  'Sampah plastic kreasi \n dari tangan',
+                                  'Sampah plastic kreasi \ndari tangan',
                             ),
                           ),
                         ),
@@ -221,7 +220,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.purple[200],
-                            border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
@@ -229,7 +227,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
                             child: MyListTile(
                               iconImagePath: 'images/recycle-packaging.png',
                               tileTitle: 'Sampah Kardus',
-                              tileSubtitle: 'Sampah kardus bisa daur ulang',
+                              tileSubtitle: 'Sampah kardus bisa\ndaur ulang',
                             ),
                           ),
                         ),

@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController _searchController = TextEditingController();
   Channel _channel = Channel(
       id: '',
       profilePictureUrl: '',
@@ -200,29 +201,32 @@ class _HomeScreenState extends State<HomeScreen> {
 
             // SEARCH BAR
             Container(
-              decoration: BoxDecoration(
-                color: Colors.blue[600],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              padding: EdgeInsets.all(12),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Search',
-                    style: TextStyle(
+            decoration: BoxDecoration(
+              color: Colors.blue[600],
+              borderRadius: BorderRadius.circular(12),
+            ),
+            padding: EdgeInsets.all(12),
+            child: Stack(
+              alignment: Alignment.centerRight,
+              children: [
+                TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    hintStyle: TextStyle(
                       color: Colors.white,
                     ),
-                  )
-                ],
-              ),
+                    contentPadding: EdgeInsets.only(
+                        right: 40), // Adjust this value as needed
+                  ),
+                ),
+                Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+              ],
             ),
+          ),
             SizedBox(
                 height: 5), // Add spacing between back button and video list
             Expanded(
