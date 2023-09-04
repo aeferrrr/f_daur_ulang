@@ -42,7 +42,7 @@ class BotolContent extends StatelessWidget {
                     children: [
                       SizedBox(height: 20),
                       Text(
-                        'Sampah Plastik Menjadi Kreasi!',
+                        'Sampah Botol Menjadi Kreasi!',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -50,7 +50,7 @@ class BotolContent extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Ide kreatif kerajinan mobil-mobilan dari sampah botol plastik',
+                        'Ide kreatif kerajinan pot bunga dari sampah botol plastik',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
