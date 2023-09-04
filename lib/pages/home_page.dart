@@ -271,7 +271,8 @@ class _RecyclingSectionState extends State<RecyclingSection> {
     double defaultPaddingBottom = MediaQuery.of(context).padding.bottom;
 
     return Container(
-      padding: EdgeInsets.fromLTRB(25, 25, 25, 0),
+      padding: EdgeInsets.fromLTRB(25, 25, 25, 133),
+      margin: EdgeInsets.all(0),
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.vertical(
