@@ -186,7 +186,7 @@ class _organikState extends State<OrganikPage> {
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: ListView(
                       children: [
                         Container(
