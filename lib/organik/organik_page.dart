@@ -1,3 +1,5 @@
+import 'package:flutter_daur_ulang/pages/about_page.dart';
+import 'package:flutter_daur_ulang/pages/home_page.dart';
 import 'package:flutter_daur_ulang/util/my_button.dart';
 import 'package:flutter_daur_ulang/util/my_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -172,12 +174,12 @@ class _organikState extends State<OrganikPage> {
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: ListView(
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 110,
+                          height: 105,
                           decoration: BoxDecoration(
                             color: Colors.blue[200],
                             borderRadius: BorderRadius.circular(10),
@@ -187,7 +189,7 @@ class _organikState extends State<OrganikPage> {
                             child: MyListTile(
                               iconImagePath: 'assets/dry.png',
                               tileTitle: 'Sampah Daun Kering',
-                              tileSubtitle:
+                              tileSubtitle: 
                                   'sampah daun bisa dijadikan \npupuk kompos yang\nbermanfaat.',
                             ),
                           ),
@@ -195,7 +197,7 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 110,
+                          height: 105,
                           decoration: BoxDecoration(
                             color: Colors.green[200],
                             borderRadius: BorderRadius.circular(10),
@@ -213,7 +215,7 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 110,
+                          height: 105,
                           decoration: BoxDecoration(
                             color: Colors.purple[200],
                             borderRadius: BorderRadius.circular(10),
