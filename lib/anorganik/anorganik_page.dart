@@ -16,12 +16,6 @@ class _AnorganikPageState extends State<AnorganikPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          ],
-        ),
         backgroundColor: Colors.grey[100],
         body: SafeArea(
             child: Column(
