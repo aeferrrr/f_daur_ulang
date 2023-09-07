@@ -181,7 +181,7 @@ class _organikState extends State<OrganikPage> {
             ),
 
             Expanded(
-              child: Container(
+              child: Container( 
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -196,7 +196,7 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 105,
                           decoration: BoxDecoration(
-                            color: Colors.blue[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
@@ -212,9 +212,9 @@ class _organikState extends State<OrganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 105,
+                          height: 110,
                           decoration: BoxDecoration(
-                            color: Colors.green[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
@@ -232,7 +232,7 @@ class _organikState extends State<OrganikPage> {
                           width: double.infinity,
                           height: 105,
                           decoration: BoxDecoration(
-                            color: Colors.purple[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(

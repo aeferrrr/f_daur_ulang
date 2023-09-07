@@ -169,7 +169,7 @@ class _AnorganikPageState extends State<AnorganikPage> {
 
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(25),
@@ -181,13 +181,13 @@ class _AnorganikPageState extends State<AnorganikPage> {
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 100,
+                          height: 105,
                           decoration: BoxDecoration(
-                            color: Colors.blue[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
                               iconImagePath: 'images/trash-bin.png',
                               tileTitle: 'Sampah Botol',
@@ -199,13 +199,13 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 100,
+                          height: 105,
                           decoration: BoxDecoration(
-                            color: Colors.green[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
                               iconImagePath: 'images/degradable-plastic.png',
                               tileTitle: 'Sampah Plastic ',
@@ -217,13 +217,13 @@ class _AnorganikPageState extends State<AnorganikPage> {
                         SizedBox(height: 10),
                         Container(
                           width: double.infinity,
-                          height: 100,
+                          height: 105,
                           decoration: BoxDecoration(
-                            color: Colors.purple[200],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: MyListTile(
                               iconImagePath: 'images/recycle-packaging.png',
                               tileTitle: 'Sampah Kardus',
