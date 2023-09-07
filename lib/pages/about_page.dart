@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_daur_ulang/pages/home_page.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -8,10 +9,6 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  int _currentIndex = 0;
-
-   
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,18 +20,6 @@ class _AboutPageState extends State<AboutPage> {
           _buildProfileImage(),
           SizedBox(height: 16),
           _buildProfileCard(),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
     );
@@ -71,7 +56,6 @@ class _AboutPageState extends State<AboutPage> {
     );
   }
 
-
   Widget _buildProfileImage() {
     return Container(
       width: 200,
@@ -80,7 +64,6 @@ class _AboutPageState extends State<AboutPage> {
         shape: BoxShape.circle,
         image: DecorationImage(
           image: AssetImage('images/insa.png'),
-         
         ),
       ),
     );

@@ -26,12 +26,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-      ),
       body: SafeArea(
         child: ListView(
           children: [
@@ -65,7 +59,7 @@ class HeaderSection extends StatelessWidget {
                   children: [
                     SizedBox(height: 20),
                     Text(
-                      'Hallo, Pecinta Lingkungan!',
+                      'Halo, Pecinta Lingkungan!',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
