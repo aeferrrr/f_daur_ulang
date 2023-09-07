@@ -76,13 +76,7 @@ class HeaderSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          AboutPage(), // Ganti dengan halaman notifikasi yang diinginkan
-                    ),
-                  );
+                  
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -91,7 +85,7 @@ class HeaderSection extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(12),
                   child: Icon(
-                    Icons.person_2_sharp,
+                    Icons.notifications,
                     color: Colors.white,
                   ),
                 ),
